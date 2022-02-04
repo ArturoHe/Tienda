@@ -1,6 +1,7 @@
 package gui.registroylogin;
 
 import gui.*;
+import gui.opciones.PantallaInicio;
 import java.awt.BorderLayout;
 import gui.registroylogin.*;
 
@@ -202,7 +203,7 @@ public class PantallaLogin extends javax.swing.JPanel {
 
     private void botonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntrarActionPerformed
         // TODO add your handling code here:
-        Hud p1 = new Hud();
+        PantallaInicio p1 = new PantallaInicio();
         p1.setSize(350, 600);
         p1.setLocation(0, 0);
 

@@ -24,20 +24,10 @@ public class Launcher extends javax.swing.JFrame {
 
         panelPrincipal = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        textUsuario = new javax.swing.JLabel();
-        fieldUsuario = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        textContraseña = new javax.swing.JLabel();
-        fieldPassword = new javax.swing.JPasswordField();
-        botonVerPassword = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        botonRegistro = new javax.swing.JButton();
-        botonEntrar = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -46,126 +36,36 @@ public class Launcher extends javax.swing.JFrame {
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(0, 204, 102));
         jPanel7.setMinimumSize(new java.awt.Dimension(350, 600));
         jPanel7.setPreferredSize(new java.awt.Dimension(350, 500));
 
-        jPanel2.setOpaque(false);
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setText("Coop");
+        jPanel1.add(jLabel1);
 
-        textUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        textUsuario.setText("Usuario");
-        jPanel2.add(textUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
-
-        fieldUsuario.setBackground(new java.awt.Color(255, 255, 255));
-        fieldUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        fieldUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        fieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Entrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldUsuarioActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(fieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 170, -1));
-
-        jPanel3.setOpaque(false);
-        jPanel3.setPreferredSize(new java.awt.Dimension(350, 53));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        textContraseña.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textContraseña.setForeground(new java.awt.Color(0, 0, 0));
-        textContraseña.setText("Contraseña");
-        jPanel3.add(textContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
-
-        fieldPassword.setBackground(new java.awt.Color(255, 255, 255));
-        fieldPassword.setForeground(new java.awt.Color(0, 0, 0));
-        fieldPassword.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldPasswordMouseClicked(evt);
-            }
-        });
-        fieldPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPasswordActionPerformed(evt);
-            }
-        });
-        jPanel3.add(fieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 170, -1));
-
-        botonVerPassword.setText("...");
-        botonVerPassword.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                botonVerPasswordMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                botonVerPasswordMouseReleased(evt);
-            }
-        });
-        jPanel3.add(botonVerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 20, -1));
-
-        jPanel4.setOpaque(false);
-        jPanel4.setPreferredSize(new java.awt.Dimension(350, 40));
-
-        botonRegistro.setForeground(new java.awt.Color(0, 0, 0));
-        botonRegistro.setText("Registro");
-        botonRegistro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRegistroActionPerformed(evt);
-            }
-        });
-        jPanel4.add(botonRegistro);
-
-        botonEntrar.setForeground(new java.awt.Color(0, 0, 0));
-        botonEntrar.setText("Entrar");
-        botonEntrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonEntrarActionPerformed(evt);
-            }
-        });
-        jPanel4.add(botonEntrar);
-
-        jPanel5.setAutoscrolls(true);
-        jPanel5.setOpaque(false);
-        jPanel5.setPreferredSize(new java.awt.Dimension(350, 40));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Tienda Ecomun");
-        jPanel5.add(jLabel3);
-
-        jPanel6.setOpaque(false);
-
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("¿Es Proovedor?, click  aqui.");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel6.add(jLabel1);
+        jPanel2.add(jButton1);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addGap(110, 110, 110)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(95, 95, 95)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(337, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -186,22 +86,9 @@ public class Launcher extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldUsuarioActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldUsuarioActionPerformed
-
-    private void fieldPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldPasswordMouseClicked
-        // TODO add your handling code here:
-        fieldPassword.setEchoChar('*');
-    }//GEN-LAST:event_fieldPasswordMouseClicked
-
-    private void fieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPasswordActionPerformed
-
-    private void botonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntrarActionPerformed
-        // TODO add your handling code here:
-        Hud p1 = new Hud();
+        PantallaLogin p1 = new PantallaLogin();
         p1.setSize(350, 600);
         p1.setLocation(0, 0);
         
@@ -209,30 +96,7 @@ public class Launcher extends javax.swing.JFrame {
         panelPrincipal.add(p1,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-
-    }//GEN-LAST:event_botonEntrarActionPerformed
-
-    private void botonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistroActionPerformed
-        // TODO add your handling code here:
-        PantallaRegistro p1 = new PantallaRegistro();
-        p1.setSize(350, 600);
-        p1.setLocation(0, 0);
-        
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-    }//GEN-LAST:event_botonRegistroActionPerformed
-
-    private void botonVerPasswordMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPasswordMousePressed
-        // TODO add your handling code here:
-        fieldPassword.setEchoChar((char)0);
-    }//GEN-LAST:event_botonVerPasswordMousePressed
-
-    private void botonVerPasswordMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPasswordMouseReleased
-        // TODO add your handling code here:
-        fieldPassword.setEchoChar('*');
-    }//GEN-LAST:event_botonVerPasswordMouseReleased
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,21 +142,11 @@ public class Launcher extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonEntrar;
-    private javax.swing.JButton botonRegistro;
-    private javax.swing.JButton botonVerPassword;
-    private javax.swing.JPasswordField fieldPassword;
-    private javax.swing.JTextField fieldUsuario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel panelPrincipal;
-    private javax.swing.JLabel textContraseña;
-    private javax.swing.JLabel textUsuario;
     // End of variables declaration//GEN-END:variables
 }
