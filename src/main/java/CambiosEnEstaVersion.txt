@@ -1,0 +1,5 @@
+
+Ver 1.2
+
+-Agregada Toda la parte Visual para hacer la Agenda
+-Cambio y Verificacion nombres de Variables

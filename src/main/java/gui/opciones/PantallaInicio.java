@@ -33,26 +33,26 @@ public class PantallaInicio extends javax.swing.JPanel {
 
         panelPrincipalHUD = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        botonInicio = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton8 = new javax.swing.JButton();
+        botonCarrito = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton9 = new javax.swing.JButton();
+        botonMiInformacion = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
-        jButton10 = new javax.swing.JButton();
+        botonSalir = new javax.swing.JButton();
         panelPrincipal = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        textoSaludoCliente = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        textoQueDeseas = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
+        botonFrutas = new javax.swing.JButton();
+        botonCereales = new javax.swing.JButton();
+        botonCarnes = new javax.swing.JButton();
+        botonOtros = new javax.swing.JButton();
+        botonAseo = new javax.swing.JButton();
+        botonVerduras = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(350, 519));
         setMinimumSize(new java.awt.Dimension(350, 519));
@@ -62,53 +62,53 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipalHUD.setBackground(new java.awt.Color(254, 255, 234));
         panelPrincipalHUD.setPreferredSize(new java.awt.Dimension(350, 600));
 
-        jButton7.setText("Home");
-        jButton7.setPreferredSize(new java.awt.Dimension(65, 65));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        botonInicio.setText("Inicio");
+        botonInicio.setPreferredSize(new java.awt.Dimension(65, 65));
+        botonInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                botonInicioActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton7);
+        jPanel5.add(botonInicio);
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator2.setPreferredSize(new java.awt.Dimension(3, 50));
         jPanel5.add(jSeparator2);
 
-        jButton8.setText("Carrito");
-        jButton8.setPreferredSize(new java.awt.Dimension(65, 65));
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        botonCarrito.setText("Carrito");
+        botonCarrito.setPreferredSize(new java.awt.Dimension(65, 65));
+        botonCarrito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                botonCarritoActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton8);
+        jPanel5.add(botonCarrito);
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator1.setPreferredSize(new java.awt.Dimension(3, 50));
         jPanel5.add(jSeparator1);
 
-        jButton9.setText("Mi info");
-        jButton9.setPreferredSize(new java.awt.Dimension(65, 65));
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        botonMiInformacion.setText("Mi info");
+        botonMiInformacion.setPreferredSize(new java.awt.Dimension(65, 65));
+        botonMiInformacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                botonMiInformacionActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton9);
+        jPanel5.add(botonMiInformacion);
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(3, 50));
         jPanel5.add(jSeparator3);
 
-        jButton10.setText("Salir");
-        jButton10.setPreferredSize(new java.awt.Dimension(65, 65));
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        botonSalir.setText("Salir");
+        botonSalir.setPreferredSize(new java.awt.Dimension(65, 65));
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                botonSalirActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton10);
+        jPanel5.add(botonSalir);
 
         panelPrincipal.setBackground(new java.awt.Color(51, 255, 51));
         panelPrincipal.setPreferredSize(new java.awt.Dimension(350, 519));
@@ -116,51 +116,51 @@ public class PantallaInicio extends javax.swing.JPanel {
 
         jPanel6.setBackground(new java.awt.Color(204, 204, 0));
 
-        jLabel3.setText("Hola,(Nombre)");
-        jPanel1.add(jLabel3);
+        textoSaludoCliente.setText("Hola,(Nombre)");
+        jPanel1.add(textoSaludoCliente);
 
-        jLabel4.setText("¿Que deseas hoy?");
-        jPanel7.add(jLabel4);
+        textoQueDeseas.setText("¿Que deseas hoy?");
+        jPanel7.add(textoQueDeseas);
 
-        jButton11.setText("Frutas");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        botonFrutas.setText("Frutas");
+        botonFrutas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                botonFrutasActionPerformed(evt);
             }
         });
 
-        jButton12.setText("Cereales");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        botonCereales.setText("Cereales");
+        botonCereales.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                botonCerealesActionPerformed(evt);
             }
         });
 
-        jButton13.setText("Carnes");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        botonCarnes.setText("Carnes");
+        botonCarnes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                botonCarnesActionPerformed(evt);
             }
         });
 
-        jButton14.setText("Otros");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        botonOtros.setText("Otros");
+        botonOtros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                botonOtrosActionPerformed(evt);
             }
         });
 
-        jButton15.setText("Aseo");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        botonAseo.setText("Aseo");
+        botonAseo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                botonAseoActionPerformed(evt);
             }
         });
 
-        jButton16.setText("Verduras");
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        botonVerduras.setText("Verduras");
+        botonVerduras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                botonVerdurasActionPerformed(evt);
             }
         });
 
@@ -172,17 +172,17 @@ public class PantallaInicio extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonFrutas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonVerduras, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonCereales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonCarnes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonAseo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botonOtros, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -190,14 +190,14 @@ public class PantallaInicio extends javax.swing.JPanel {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonFrutas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonVerduras, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCereales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonOtros, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAseo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCarnes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -244,7 +244,7 @@ public class PantallaInicio extends javax.swing.JPanel {
         add(panelPrincipalHUD, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void botonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInicioActionPerformed
         // TODO add your handling code here:
         PantallaInicio p1 = new PantallaInicio();
         p1.setSize(350, 519);
@@ -254,9 +254,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p1,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_botonInicioActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void botonCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCarritoActionPerformed
         // TODO add your handling code here:
         PantallaCarrito p2 = new PantallaCarrito();
         p2.setSize(350, 519);
@@ -266,9 +266,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p2,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_botonCarritoActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void botonMiInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMiInformacionActionPerformed
         // TODO add your handling code here:
         PantallaMiInformacion p3 = new PantallaMiInformacion();
         p3.setSize(350, 519);
@@ -278,9 +278,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p3,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_botonMiInformacionActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
         // TODO add your handling code here:
         PantallaLogin p4 = new PantallaLogin();
         p4.setSize(350, 600);
@@ -290,9 +290,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipalHUD.add(p4,BorderLayout.CENTER);
         panelPrincipalHUD.revalidate();
         panelPrincipalHUD.repaint();
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_botonSalirActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void botonFrutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFrutasActionPerformed
         // TODO add your handling code here:
         PanelFrutas p5 = new PanelFrutas();
         p5.setSize(350, 519);
@@ -302,9 +302,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p5,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_botonFrutasActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void botonCerealesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerealesActionPerformed
         // TODO add your handling code here:
         PanelCereales p6 = new PanelCereales();
         p6.setSize(350, 519);
@@ -314,9 +314,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p6,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }//GEN-LAST:event_botonCerealesActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void botonCarnesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCarnesActionPerformed
         // TODO add your handling code here:
         PanelCarnes p7 = new PanelCarnes();
         p7.setSize(350, 519);
@@ -326,9 +326,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p7,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }//GEN-LAST:event_botonCarnesActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void botonOtrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOtrosActionPerformed
         // TODO add your handling code here:
         PanelOtros p9 = new PanelOtros();
         p9.setSize(350, 519);
@@ -338,9 +338,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p9,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_botonOtrosActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void botonAseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAseoActionPerformed
         // TODO add your handling code here:
         PanelAseo p8 = new PanelAseo();
         p8.setSize(350, 600);
@@ -350,9 +350,9 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipalHUD.add(p8,BorderLayout.CENTER);
         panelPrincipalHUD.revalidate();
         panelPrincipalHUD.repaint();
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_botonAseoActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void botonVerdurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerdurasActionPerformed
         // TODO add your handling code here:
         PanelVerduras p6 = new PanelVerduras();
         p6.setSize(350, 519);
@@ -362,22 +362,20 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.add(p6,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_botonVerdurasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton botonAseo;
+    private javax.swing.JButton botonCarnes;
+    private javax.swing.JButton botonCarrito;
+    private javax.swing.JButton botonCereales;
+    private javax.swing.JButton botonFrutas;
+    private javax.swing.JButton botonInicio;
+    private javax.swing.JButton botonMiInformacion;
+    private javax.swing.JButton botonOtros;
+    private javax.swing.JButton botonSalir;
+    private javax.swing.JButton botonVerduras;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -388,5 +386,7 @@ public class PantallaInicio extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPanel panelPrincipalHUD;
+    private javax.swing.JLabel textoQueDeseas;
+    private javax.swing.JLabel textoSaludoCliente;
     // End of variables declaration//GEN-END:variables
 }

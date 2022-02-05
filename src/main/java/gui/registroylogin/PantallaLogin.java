@@ -4,6 +4,7 @@ import gui.*;
 import gui.opciones.PantallaInicio;
 import java.awt.BorderLayout;
 import gui.registroylogin.*;
+import gui.registroylogin.agenda.PantallaAgenda;
 
 public class PantallaLogin extends javax.swing.JPanel {
 
@@ -26,19 +27,19 @@ public class PantallaLogin extends javax.swing.JPanel {
         panelPrincipal = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        textUsuario = new javax.swing.JLabel();
+        textoUsuario = new javax.swing.JLabel();
         fieldUsuario = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        textContraseña = new javax.swing.JLabel();
+        textoContrasena = new javax.swing.JLabel();
         fieldPassword = new javax.swing.JPasswordField();
         botonVerPassword = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         botonRegistro = new javax.swing.JButton();
         botonEntrar = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        textoPrincipal = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        textoProovedores = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(350, 500));
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -54,10 +55,10 @@ public class PantallaLogin extends javax.swing.JPanel {
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        textUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textUsuario.setForeground(new java.awt.Color(0, 0, 0));
-        textUsuario.setText("Usuario");
-        jPanel2.add(textUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+        textoUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        textoUsuario.setText("Usuario");
+        jPanel2.add(textoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         fieldUsuario.setBackground(new java.awt.Color(255, 255, 255));
         fieldUsuario.setForeground(new java.awt.Color(0, 0, 0));
@@ -73,10 +74,10 @@ public class PantallaLogin extends javax.swing.JPanel {
         jPanel3.setPreferredSize(new java.awt.Dimension(350, 53));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        textContraseña.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textContraseña.setForeground(new java.awt.Color(0, 0, 0));
-        textContraseña.setText("Contraseña");
-        jPanel3.add(textContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+        textoContrasena.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoContrasena.setForeground(new java.awt.Color(0, 0, 0));
+        textoContrasena.setText("Contraseña");
+        jPanel3.add(textoContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
 
         fieldPassword.setBackground(new java.awt.Color(255, 255, 255));
         fieldPassword.setForeground(new java.awt.Color(0, 0, 0));
@@ -120,17 +121,22 @@ public class PantallaLogin extends javax.swing.JPanel {
         jPanel5.setOpaque(false);
         jPanel5.setPreferredSize(new java.awt.Dimension(350, 40));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Tienda Ecomun");
-        jPanel5.add(jLabel3);
+        textoPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
+        textoPrincipal.setText("Tienda Ecomun");
+        jPanel5.add(textoPrincipal);
 
         jPanel6.setOpaque(false);
 
-        jLabel1.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel1.setText("¿Es Proovedor?, click  aqui.");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel6.add(jLabel1);
+        textoProovedores.setForeground(new java.awt.Color(0, 0, 255));
+        textoProovedores.setText("¿Es Proovedor?, click  aqui.");
+        textoProovedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        textoProovedores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textoProovedoresMouseClicked(evt);
+            }
+        });
+        jPanel6.add(textoProovedores);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -213,6 +219,18 @@ public class PantallaLogin extends javax.swing.JPanel {
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonEntrarActionPerformed
 
+    private void textoProovedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textoProovedoresMouseClicked
+        // TODO add your handling code here:
+        PantallaAgenda p2 = new PantallaAgenda();
+        p2.setSize(350, 600);
+        p2.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p2,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint(); 
+    }//GEN-LAST:event_textoProovedoresMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonEntrar;
@@ -220,8 +238,6 @@ public class PantallaLogin extends javax.swing.JPanel {
     private javax.swing.JButton botonVerPassword;
     private javax.swing.JPasswordField fieldPassword;
     private javax.swing.JTextField fieldUsuario;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -229,7 +245,9 @@ public class PantallaLogin extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel panelPrincipal;
-    private javax.swing.JLabel textContraseña;
-    private javax.swing.JLabel textUsuario;
+    private javax.swing.JLabel textoContrasena;
+    private javax.swing.JLabel textoPrincipal;
+    private javax.swing.JLabel textoProovedores;
+    private javax.swing.JLabel textoUsuario;
     // End of variables declaration//GEN-END:variables
 }

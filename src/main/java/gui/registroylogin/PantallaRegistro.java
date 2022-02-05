@@ -27,46 +27,45 @@ public class PantallaRegistro extends javax.swing.JPanel {
         jPanel6 = new javax.swing.JPanel();
         fieldUsuario = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        textoUsuario = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        fieldPassword = new javax.swing.JPasswordField();
-        botonVerPass = new javax.swing.JButton();
+        fieldContrasena = new javax.swing.JPasswordField();
+        botonVerContrasena = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        textoContrasena = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
-        fieldPasswordVerify = new javax.swing.JPasswordField();
-        botonVerPassVerify = new javax.swing.JButton();
+        fieldRepetirContrasena = new javax.swing.JPasswordField();
+        botonVerRepetirContrasena = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        textoRepetirContrasena = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         fieldNombre = new javax.swing.JTextField();
         jPanel19 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        textoNombre = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         fieldCelular = new javax.swing.JTextField();
         jPanel23 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        textoCelular = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jPanel25 = new javax.swing.JPanel();
         jPanel26 = new javax.swing.JPanel();
         fieldCorreo = new javax.swing.JTextField();
         jPanel27 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        textoCorreo = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         botonRegistrarme = new javax.swing.JButton();
-        jPanel30 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel29 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        textoPrincipal = new javax.swing.JLabel();
+        jPanel30 = new javax.swing.JPanel();
+        botonAtras = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(350, 600));
         setPreferredSize(new java.awt.Dimension(350, 600));
@@ -83,8 +82,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        jLabel2.setText("Usuario");
-        jPanel5.add(jLabel2);
+        textoUsuario.setText("Usuario");
+        jPanel5.add(textoUsuario);
 
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -108,40 +107,40 @@ public class PantallaRegistro extends javax.swing.JPanel {
         jPanel8.setBackground(new java.awt.Color(255, 255, 51));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fieldPassword.setPreferredSize(new java.awt.Dimension(150, 20));
-        fieldPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+        fieldContrasena.setPreferredSize(new java.awt.Dimension(150, 20));
+        fieldContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldPasswordMouseClicked(evt);
+                fieldContrasenaMouseClicked(evt);
             }
         });
-        fieldPassword.addActionListener(new java.awt.event.ActionListener() {
+        fieldContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPasswordActionPerformed(evt);
+                fieldContrasenaActionPerformed(evt);
             }
         });
-        jPanel9.add(fieldPassword);
+        jPanel9.add(fieldContrasena);
 
-        botonVerPass.setText("...");
-        botonVerPass.setPreferredSize(new java.awt.Dimension(20, 20));
-        botonVerPass.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonVerContrasena.setText("...");
+        botonVerContrasena.setPreferredSize(new java.awt.Dimension(20, 20));
+        botonVerContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                botonVerPassMousePressed(evt);
+                botonVerContrasenaMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                botonVerPassMouseReleased(evt);
+                botonVerContrasenaMouseReleased(evt);
             }
         });
-        botonVerPass.addActionListener(new java.awt.event.ActionListener() {
+        botonVerContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVerPassActionPerformed(evt);
+                botonVerContrasenaActionPerformed(evt);
             }
         });
-        jPanel9.add(botonVerPass);
+        jPanel9.add(botonVerContrasena);
 
         jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, 28));
 
-        jLabel3.setText("Contrasena");
-        jPanel10.add(jLabel3);
+        textoContrasena.setText("Contrasena");
+        jPanel10.add(textoContrasena);
 
         jPanel8.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -165,32 +164,32 @@ public class PantallaRegistro extends javax.swing.JPanel {
         jPanel12.setBackground(new java.awt.Color(255, 255, 51));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fieldPasswordVerify.setPreferredSize(new java.awt.Dimension(150, 20));
-        fieldPasswordVerify.addMouseListener(new java.awt.event.MouseAdapter() {
+        fieldRepetirContrasena.setPreferredSize(new java.awt.Dimension(150, 20));
+        fieldRepetirContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                fieldPasswordVerifyMouseClicked(evt);
+                fieldRepetirContrasenaMouseClicked(evt);
             }
         });
-        jPanel13.add(fieldPasswordVerify);
+        jPanel13.add(fieldRepetirContrasena);
 
-        botonVerPassVerify.setText("...");
-        botonVerPassVerify.setPreferredSize(new java.awt.Dimension(20, 20));
-        botonVerPassVerify.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonVerRepetirContrasena.setText("...");
+        botonVerRepetirContrasena.setPreferredSize(new java.awt.Dimension(20, 20));
+        botonVerRepetirContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                botonVerPassVerifyMousePressed(evt);
+                botonVerRepetirContrasenaMousePressed(evt);
             }
             public void mouseReleased(java.awt.event.MouseEvent evt) {
-                botonVerPassVerifyMouseReleased(evt);
+                botonVerRepetirContrasenaMouseReleased(evt);
             }
         });
-        jPanel13.add(botonVerPassVerify);
+        jPanel13.add(botonVerRepetirContrasena);
 
         jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
         jPanel14.setLayout(new javax.swing.BoxLayout(jPanel14, javax.swing.BoxLayout.LINE_AXIS));
 
-        jLabel4.setText("Repetir Contrasena");
-        jPanel14.add(jLabel4);
+        textoRepetirContrasena.setText("Repetir Contrasena");
+        jPanel14.add(textoRepetirContrasena);
 
         jPanel12.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -219,8 +218,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        jLabel5.setText("Nombre");
-        jPanel19.add(jLabel5);
+        textoNombre.setText("Nombre");
+        jPanel19.add(textoNombre);
 
         jPanel17.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -249,8 +248,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel21.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        jLabel6.setText("Celular");
-        jPanel23.add(jLabel6);
+        textoCelular.setText("Celular");
+        jPanel23.add(textoCelular);
 
         jPanel21.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -279,8 +278,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel25.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        jLabel7.setText("Correo");
-        jPanel27.add(jLabel7);
+        textoCorreo.setText("Correo");
+        jPanel27.add(textoCorreo);
 
         jPanel25.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -338,54 +337,66 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
-        jPanel30.setBackground(new java.awt.Color(153, 204, 0));
-        jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(204, 153, 0));
+        textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setText("Registro");
+        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 90, 40));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Registro");
-        jPanel2.add(jLabel1);
+        jPanel30.setBackground(new java.awt.Color(255, 153, 0));
 
-        jPanel30.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 5, -1, -1));
-
-        jPanel29.setBackground(new java.awt.Color(255, 102, 102));
-
-        jButton3.setText("...");
-        jButton3.setPreferredSize(new java.awt.Dimension(20, 20));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        botonAtras.setText("...");
+        botonAtras.setPreferredSize(new java.awt.Dimension(30, 30));
+        botonAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                botonAtrasActionPerformed(evt);
             }
         });
-        jPanel29.add(jButton3);
 
-        jPanel30.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
+        jPanel30.setLayout(jPanel30Layout);
+        jPanel30Layout.setHorizontalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel30Layout.setVerticalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel30Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         add(panelPrincipal, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
         PantallaLogin p1 = new PantallaLogin();
         p1.setSize(350, 600);
@@ -397,69 +408,62 @@ public class PantallaRegistro extends javax.swing.JPanel {
         panelPrincipal.repaint();
 
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonRegistrarmeActionPerformed
 
-    private void botonVerPassVerifyMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPassVerifyMouseReleased
+    private void botonVerRepetirContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerRepetirContrasenaMouseReleased
         // TODO add your handling code here:
-        fieldPasswordVerify.setEchoChar('*');
-    }//GEN-LAST:event_botonVerPassVerifyMouseReleased
+        fieldRepetirContrasena.setEchoChar('*');
+    }//GEN-LAST:event_botonVerRepetirContrasenaMouseReleased
 
-    private void botonVerPassVerifyMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPassVerifyMousePressed
+    private void botonVerRepetirContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerRepetirContrasenaMousePressed
         // TODO add your handling code here:
-        fieldPasswordVerify.setEchoChar((char)0);
-    }//GEN-LAST:event_botonVerPassVerifyMousePressed
+        fieldRepetirContrasena.setEchoChar((char)0);
+    }//GEN-LAST:event_botonVerRepetirContrasenaMousePressed
 
-    private void fieldPasswordVerifyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldPasswordVerifyMouseClicked
+    private void fieldRepetirContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldRepetirContrasenaMouseClicked
         // TODO add your handling code here:
-        fieldPasswordVerify.setEchoChar('*');
-    }//GEN-LAST:event_fieldPasswordVerifyMouseClicked
+        fieldRepetirContrasena.setEchoChar('*');
+    }//GEN-LAST:event_fieldRepetirContrasenaMouseClicked
 
-    private void botonVerPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerPassActionPerformed
+    private void botonVerContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerContrasenaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonVerPassActionPerformed
+    }//GEN-LAST:event_botonVerContrasenaActionPerformed
 
-    private void botonVerPassMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPassMouseReleased
+    private void botonVerContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerContrasenaMouseReleased
         // TODO add your handling code here:
-        fieldPassword.setEchoChar('*');
-    }//GEN-LAST:event_botonVerPassMouseReleased
+        fieldContrasena.setEchoChar('*');
+    }//GEN-LAST:event_botonVerContrasenaMouseReleased
 
-    private void botonVerPassMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPassMousePressed
+    private void botonVerContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerContrasenaMousePressed
         // TODO add your handling code here:
-        fieldPassword.setEchoChar((char)0);
-    }//GEN-LAST:event_botonVerPassMousePressed
+        fieldContrasena.setEchoChar((char)0);
+    }//GEN-LAST:event_botonVerContrasenaMousePressed
 
-    private void fieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPasswordActionPerformed
+    private void fieldContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldContrasenaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPasswordActionPerformed
+    }//GEN-LAST:event_fieldContrasenaActionPerformed
 
-    private void fieldPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldPasswordMouseClicked
+    private void fieldContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldContrasenaMouseClicked
         // TODO add your handling code here:
-        fieldPassword.setEchoChar('*');
-    }//GEN-LAST:event_fieldPasswordMouseClicked
+        fieldContrasena.setEchoChar('*');
+    }//GEN-LAST:event_fieldContrasenaMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAtras;
     private javax.swing.JButton botonRegistrarme;
-    private javax.swing.JButton botonVerPass;
-    private javax.swing.JButton botonVerPassVerify;
+    private javax.swing.JButton botonVerContrasena;
+    private javax.swing.JButton botonVerRepetirContrasena;
     private javax.swing.JTextField fieldCelular;
+    private javax.swing.JPasswordField fieldContrasena;
     private javax.swing.JTextField fieldCorreo;
     private javax.swing.JTextField fieldNombre;
-    private javax.swing.JPasswordField fieldPassword;
-    private javax.swing.JPasswordField fieldPasswordVerify;
+    private javax.swing.JPasswordField fieldRepetirContrasena;
     private javax.swing.JTextField fieldUsuario;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
@@ -480,7 +484,6 @@ public class PantallaRegistro extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
@@ -490,5 +493,12 @@ public class PantallaRegistro extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JLabel textoCelular;
+    private javax.swing.JLabel textoContrasena;
+    private javax.swing.JLabel textoCorreo;
+    private javax.swing.JLabel textoNombre;
+    private javax.swing.JLabel textoPrincipal;
+    private javax.swing.JLabel textoRepetirContrasena;
+    private javax.swing.JLabel textoUsuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -25,9 +25,9 @@ public class Launcher extends javax.swing.JFrame {
         panelPrincipal = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        textoPrincipal = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        botonEntrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -40,16 +40,16 @@ public class Launcher extends javax.swing.JFrame {
         jPanel7.setMinimumSize(new java.awt.Dimension(350, 600));
         jPanel7.setPreferredSize(new java.awt.Dimension(350, 500));
 
-        jLabel1.setText("Coop");
-        jPanel1.add(jLabel1);
+        textoPrincipal.setText("Coop");
+        jPanel1.add(textoPrincipal);
 
-        jButton1.setText("Entrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonEntrar.setText("Entrar");
+        botonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonEntrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
+        jPanel2.add(botonEntrar);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -86,7 +86,7 @@ public class Launcher extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntrarActionPerformed
         // TODO add your handling code here:
         PantallaLogin p1 = new PantallaLogin();
         p1.setSize(350, 600);
@@ -96,7 +96,7 @@ public class Launcher extends javax.swing.JFrame {
         panelPrincipal.add(p1,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,11 +142,11 @@ public class Launcher extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton botonEntrar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JLabel textoPrincipal;
     // End of variables declaration//GEN-END:variables
 }
