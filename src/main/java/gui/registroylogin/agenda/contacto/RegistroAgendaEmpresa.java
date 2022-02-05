@@ -51,8 +51,6 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         fieldCorreo = new javax.swing.JTextField();
         jPanel28 = new javax.swing.JPanel();
         textoCorreo = new javax.swing.JLabel();
-        jPanel29 = new javax.swing.JPanel();
-        botonRegistrarme = new javax.swing.JButton();
         jPanel30 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
@@ -83,6 +81,10 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         fieldNIT = new javax.swing.JTextField();
         jPanel49 = new javax.swing.JPanel();
         textoNIT = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        textoErrorRegistro = new javax.swing.JLabel();
+        jPanel29 = new javax.swing.JPanel();
+        botonRegistrarme = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(350, 500));
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -90,6 +92,9 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
+
+        jPanel1.setMinimumSize(new java.awt.Dimension(350, 600));
+        jPanel1.setPreferredSize(new java.awt.Dimension(350, 600));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -127,6 +132,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setPreferredSize(new java.awt.Dimension(312, 600));
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 51));
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -147,7 +153,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -217,14 +223,6 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        botonRegistrarme.setText("Registrar Contacto");
-        botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRegistrarmeActionPerformed(evt);
-            }
-        });
-        jPanel29.add(botonRegistrarme);
 
         jPanel31.setBackground(new java.awt.Color(255, 255, 51));
         jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -376,11 +374,12 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel4.add(textoErrorRegistro);
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -389,6 +388,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
             .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -409,17 +409,26 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
+
+        botonRegistrarme.setText("Registrar Contacto");
+        botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRegistrarmeActionPerformed(evt);
+            }
+        });
+        jPanel29.add(botonRegistrarme);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -427,7 +436,10 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, 502, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -438,7 +450,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         add(panelPrincipal, java.awt.BorderLayout.CENTER);
@@ -446,23 +458,52 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaLogin p4 = new PantallaLogin();
+        SeleccionAgenda p4 = new SeleccionAgenda();
         p4.setSize(350, 600);
         p4.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p4,BorderLayout.CENTER);
+        panelPrincipal.add(p4, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
         // TODO add your handling code here:
+        if (verificarEspacios() == true) {
+            System.out.println("esta lleno");
+
+        } else {
+            textoErrorRegistro.setText("Debe diligenciar todos los espacios");
+        }
+
+
     }//GEN-LAST:event_botonRegistrarmeActionPerformed
-    
-    
+
     //Mio
-    
+    public boolean verificarEspacios() {
+
+        boolean espaciosLlenos;
+
+        if (fieldCelular.getText().isEmpty()
+                || fieldCiudad.getText().isEmpty()
+                || fieldCorreo.getText().isEmpty()
+                || fieldDireccion.getText().isEmpty()
+                || fieldNIT.getText().isEmpty()
+                || fieldNombre.getText().isEmpty()
+                || fieldPais.getText().isEmpty()
+                || fieldProducto.getText().isEmpty()) {
+
+            espaciosLlenos = false;
+
+        } else {
+
+            espaciosLlenos = true;
+        }
+
+        return espaciosLlenos;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
@@ -502,6 +543,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
@@ -517,6 +559,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JLabel textoCiudad;
     private javax.swing.JLabel textoCorreo;
     private javax.swing.JLabel textoDireccion;
+    private javax.swing.JLabel textoErrorRegistro;
     private javax.swing.JLabel textoNIT;
     private javax.swing.JLabel textoNombre;
     private javax.swing.JLabel textoPais;

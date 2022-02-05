@@ -159,6 +159,9 @@
                       <Dimension value="[120, 50]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPersonaNaturalActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="botonEmpresa">
                   <Properties>
@@ -167,6 +170,9 @@
                       <Dimension value="[120, 50]"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEmpresaActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

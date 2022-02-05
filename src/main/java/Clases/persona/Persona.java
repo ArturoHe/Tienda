@@ -11,6 +11,14 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(String nombre, String celular, String correo) {
+        this.nombre = nombre;
+        this.celular = celular;
+        this.correo = correo;
+    }
+    
+    
+
     //Get & Set
     public String getNombre() {
         return nombre;

@@ -8,10 +8,20 @@ public class Cliente extends Persona {
     private String usuario;
     private String contraseña;
 
+    
     //Constructor
     public Cliente() {
     }
 
+    
+    
+    public Cliente(String usuario, String contraseña, String nombre, String celular, String correo) {
+        super(nombre, celular, correo);
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+    }
+    
+    
     //Get & Set
     public String getUsuario() {
         return usuario;

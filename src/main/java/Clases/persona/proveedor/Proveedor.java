@@ -14,6 +14,17 @@ public class Proveedor extends Persona {
     public Proveedor() {
     }
 
+    public Proveedor(String producto, String pais, String ciudad, String direccion, String nombre, String celular, String correo) {
+        super(nombre, celular, correo);
+        this.producto = producto;
+        this.pais = pais;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+    }
+    
+    
+    
+
     //Get & Set
     public String getProducto() {
         return producto;

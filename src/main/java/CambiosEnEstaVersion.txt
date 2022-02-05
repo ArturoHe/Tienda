@@ -1,5 +1,5 @@
+Ver 1.2.1
 
-Ver 1.2
-
--Agregada Toda la parte Visual para hacer la Agenda
--Cambio y Verificacion nombres de Variables
+-Cambios en el apartado de Agenda
+-Verificacion de espacios vacios en el registro de Agenda
+-implementacion eliminar contacto en agenda

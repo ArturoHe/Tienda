@@ -82,10 +82,20 @@ public class SeleccionAgenda extends javax.swing.JPanel {
 
         botonPersonaNatural.setText("Persona Natural");
         botonPersonaNatural.setPreferredSize(new java.awt.Dimension(120, 50));
+        botonPersonaNatural.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPersonaNaturalActionPerformed(evt);
+            }
+        });
         jPanel7.add(botonPersonaNatural);
 
         botonEmpresa.setText("Empresa");
         botonEmpresa.setPreferredSize(new java.awt.Dimension(120, 50));
+        botonEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpresaActionPerformed(evt);
+            }
+        });
         jPanel7.add(botonEmpresa);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -121,15 +131,39 @@ public class SeleccionAgenda extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaLogin p4 = new PantallaLogin();
-        p4.setSize(350, 600);
-        p4.setLocation(0, 0);
+        PantallaLogin p1 = new PantallaLogin();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p4,BorderLayout.CENTER);
+        panelPrincipal.add(p1,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonAtrasActionPerformed
+
+    private void botonPersonaNaturalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPersonaNaturalActionPerformed
+        // TODO add your handling code here:
+        RegistroAgendaPersona p2 = new RegistroAgendaPersona();
+        p2.setSize(350, 600);
+        p2.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p2,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonPersonaNaturalActionPerformed
+
+    private void botonEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpresaActionPerformed
+        // TODO add your handling code here:
+        RegistroAgendaEmpresa p3 = new RegistroAgendaEmpresa();
+        p3.setSize(350, 600);
+        p3.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p3,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonEmpresaActionPerformed
     
     
     //Mio

@@ -446,7 +446,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaLogin p4 = new PantallaLogin();
+        SeleccionAgenda p4 = new SeleccionAgenda();
         p4.setSize(350, 600);
         p4.setLocation(0, 0);
 
