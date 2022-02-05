@@ -1,12 +1,11 @@
 package gui.registroylogin.agenda.contacto;
 
-import gui.registroylogin.agenda.*;
-import gui.registroylogin.*;
-import gui.*;
-import gui.opciones.PantallaInicio;
+import Clases.persona.proveedor.Proveedor;
+import Clases.persona.proveedor.ProveedorPersonaNatural;
+import gui.registroylogin.agenda.PantallaAgenda;
 import java.awt.BorderLayout;
-import gui.registroylogin.*;
-import javax.swing.*;
+import java.util.ArrayList;
+import logica.*;
 
 public class RegistroAgendaPersona extends javax.swing.JPanel {
 
@@ -33,12 +32,18 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         botonAtras = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        botonRegistrarme = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        textoErrorRegistro = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel5 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         fieldNombre = new javax.swing.JTextField();
         jPanel20 = new javax.swing.JPanel();
-        textoNombre = new javax.swing.JLabel();
+        textoNombreEncargado = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
@@ -51,8 +56,6 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         fieldCorreo = new javax.swing.JTextField();
         jPanel28 = new javax.swing.JPanel();
         textoCorreo = new javax.swing.JLabel();
-        jPanel29 = new javax.swing.JPanel();
-        botonRegistrarme = new javax.swing.JButton();
         jPanel30 = new javax.swing.JPanel();
         jPanel31 = new javax.swing.JPanel();
         jPanel32 = new javax.swing.JPanel();
@@ -83,6 +86,18 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         fieldCedula = new javax.swing.JTextField();
         jPanel49 = new javax.swing.JPanel();
         textoCedula = new javax.swing.JLabel();
+        jPanel50 = new javax.swing.JPanel();
+        jPanel51 = new javax.swing.JPanel();
+        jPanel52 = new javax.swing.JPanel();
+        fieldDiadeEntregas = new javax.swing.JTextField();
+        jPanel53 = new javax.swing.JPanel();
+        textoDiadeEntregas = new javax.swing.JLabel();
+        jPanel54 = new javax.swing.JPanel();
+        jPanel55 = new javax.swing.JPanel();
+        jPanel56 = new javax.swing.JPanel();
+        checkActivo = new javax.swing.JCheckBox();
+        jPanel57 = new javax.swing.JPanel();
+        textoContratoActivo = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(350, 500));
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -90,13 +105,16 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
+        panelPrincipal.setMaximumSize(new java.awt.Dimension(350, 600));
+        panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 600));
+        panelPrincipal.setPreferredSize(new java.awt.Dimension(350, 600));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textoPrincipal.setText("Registro Personas");
-        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, 40));
+        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -128,6 +146,20 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
 
+        botonRegistrarme.setText("Registrar Contacto");
+        botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRegistrarmeActionPerformed(evt);
+            }
+        });
+        jPanel29.add(botonRegistrarme);
+
+        jPanel4.add(textoErrorRegistro);
+
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        jPanel5.setBackground(new java.awt.Color(255, 153, 153));
+
         jPanel18.setBackground(new java.awt.Color(255, 255, 51));
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -136,8 +168,8 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
 
         jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        textoNombre.setText("Nombre");
-        jPanel20.add(textoNombre);
+        textoNombreEncargado.setText("Nombre Encargado");
+        jPanel20.add(textoNombreEncargado);
 
         jPanel18.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -217,14 +249,6 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
                 .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        botonRegistrarme.setText("Registrar Contacto");
-        botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRegistrarmeActionPerformed(evt);
-            }
-        });
-        jPanel29.add(botonRegistrarme);
 
         jPanel31.setBackground(new java.awt.Color(255, 255, 51));
         jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -376,23 +400,91 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel51.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fieldDiadeEntregas.setPreferredSize(new java.awt.Dimension(150, 20));
+        jPanel52.add(fieldDiadeEntregas);
+
+        jPanel51.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
+
+        textoDiadeEntregas.setText("Dia de Entregas");
+        jPanel53.add(textoDiadeEntregas);
+
+        jPanel51.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
+
+        javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
+        jPanel50.setLayout(jPanel50Layout);
+        jPanel50Layout.setHorizontalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel50Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
+        jPanel50Layout.setVerticalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel50Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel55.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        checkActivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkActivoActionPerformed(evt);
+            }
+        });
+        jPanel56.add(checkActivo);
+
+        jPanel55.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
+
+        textoContratoActivo.setText("Contrato Activo");
+        jPanel57.add(textoContratoActivo);
+
+        jPanel55.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
+
+        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
+        jPanel54.setLayout(jPanel54Layout);
+        jPanel54Layout.setHorizontalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel54Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel55, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel54Layout.setVerticalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel54Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel25, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel30, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel54, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel50, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel38, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel42, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel46, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 38, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -409,7 +501,33 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
                 .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        jScrollPane3.setViewportView(jPanel5);
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -418,8 +536,8 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -434,7 +552,9 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -451,26 +571,100 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         p4.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p4,BorderLayout.CENTER);
+        panelPrincipal.add(p4, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
         // TODO add your handling code here:
+        if (verificarEspacios() == true) {
+            
+            ArrayList<String> nombreArrayList = new ArrayList<String>();
+            
+            System.out.println("llenos");
+            Listas.setListaProveedores(agregarProveedor(Listas.getListaProveedores()));
+            
+            PantallaAgenda p2 = new PantallaAgenda();
+            p2.setSize(350, 600);
+            p2.setLocation(0, 0);
+
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p2,BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint(); 
+
+        } else {
+
+            textoErrorRegistro.setText("Debe diligenciar todos los espacios de texto");
+        }
     }//GEN-LAST:event_botonRegistrarmeActionPerformed
-    
-    
+
+    private void checkActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActivoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkActivoActionPerformed
+
     //Mio
-    
+    public boolean verificarEspacios() {
+
+        boolean espaciosLlenos;
+
+        if (fieldCelular.getText().isEmpty()
+                || fieldCiudad.getText().isEmpty()
+                || fieldCorreo.getText().isEmpty()
+                || fieldDireccion.getText().isEmpty()
+                || fieldCedula.getText().isEmpty()
+                || fieldNombre.getText().isEmpty()
+                || fieldPais.getText().isEmpty()
+                || fieldProducto.getText().isEmpty()
+                || fieldDiadeEntregas.getText().isEmpty()
+                || fieldCelular.getText().isEmpty()) {
+
+            espaciosLlenos = false;
+
+        } else {
+
+            espaciosLlenos = true;
+        }
+
+        return espaciosLlenos;
+    }
+
+    public ArrayList agregarProveedor(ArrayList listaPrincipal) {
+        
+        ArrayList<Proveedor> listaLocal = new ArrayList<>();
+        
+        listaLocal = listaPrincipal;
+
+        ProveedorPersonaNatural nuevoProveedor = new ProveedorPersonaNatural();
+
+        nuevoProveedor.setNombre(fieldNombre.getText());
+        nuevoProveedor.setCelular(fieldCelular.getText());
+        nuevoProveedor.setCorreo(fieldCorreo.getText());
+        nuevoProveedor.setProducto(fieldProducto.getText());
+        nuevoProveedor.setPais(fieldPais.getText());
+        nuevoProveedor.setCiudad(fieldCiudad.getText());
+        nuevoProveedor.setDireccion(fieldDireccion.getText());
+        nuevoProveedor.setCedula(Integer.parseInt(fieldCedula.getText()));
+        nuevoProveedor.setDiaDeEntregaMercancias(fieldDiadeEntregas.getText());
+        nuevoProveedor.setActivo(checkActivo.isSelected());
+        
+        listaLocal.add(nuevoProveedor);
+        
+        return listaLocal;
+
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton botonRegistrarme;
+    private javax.swing.JCheckBox checkActivo;
     private javax.swing.JTextField fieldCedula;
     private javax.swing.JTextField fieldCelular;
     private javax.swing.JTextField fieldCiudad;
     private javax.swing.JTextField fieldCorreo;
+    private javax.swing.JTextField fieldDiadeEntregas;
     private javax.swing.JTextField fieldDireccion;
     private javax.swing.JTextField fieldNombre;
     private javax.swing.JTextField fieldPais;
@@ -502,6 +696,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
@@ -512,13 +707,26 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel47;
     private javax.swing.JPanel jPanel48;
     private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JLabel textoCedula;
     private javax.swing.JLabel textoCelular;
     private javax.swing.JLabel textoCiudad;
+    private javax.swing.JLabel textoContratoActivo;
     private javax.swing.JLabel textoCorreo;
+    private javax.swing.JLabel textoDiadeEntregas;
     private javax.swing.JLabel textoDireccion;
-    private javax.swing.JLabel textoNombre;
+    private javax.swing.JLabel textoErrorRegistro;
+    private javax.swing.JLabel textoNombreEncargado;
     private javax.swing.JLabel textoPais;
     private javax.swing.JLabel textoPrincipal;
     private javax.swing.JLabel textoProducto;

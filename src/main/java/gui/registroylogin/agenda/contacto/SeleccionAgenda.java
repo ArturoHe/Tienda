@@ -42,6 +42,7 @@ public class SeleccionAgenda extends javax.swing.JPanel {
         setLayout(new java.awt.BorderLayout());
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
+        panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 600));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

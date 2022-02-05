@@ -1,6 +1,6 @@
 package clases.persona;
 
-public class Persona {
+public abstract class Persona {
 
     //Atributos
     private String nombre;

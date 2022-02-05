@@ -2,7 +2,7 @@ package Clases.persona.proveedor;
 
 import clases.persona.Persona;
 
-public class Proveedor extends Persona {
+public abstract class Proveedor extends Persona {
 
     //Atributos
     private String producto;

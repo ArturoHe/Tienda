@@ -1,5 +1,5 @@
-Ver 1.2.1
+Ver 1.2.2
 
--Cambios en el apartado de Agenda
--Verificacion de espacios vacios en el registro de Agenda
--implementacion eliminar contacto en agenda
+-Agregada la clase Producto
+-Agregados abstract Proveedor,Persona, Producto.
+-Ahora se puede Agregar Proveedores del tipo Persona natural a la agenda

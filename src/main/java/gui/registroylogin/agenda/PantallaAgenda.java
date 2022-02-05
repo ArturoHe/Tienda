@@ -270,7 +270,7 @@ public class PantallaAgenda extends javax.swing.JPanel {
 
         for (int i = 0; i < listaLocal.size(); i++) {
 
-            modelo.addElement(listaLocal.get(i));;
+            modelo.addElement(listaLocal.get(i).getNombre());;
 
         }
         return modelo;
