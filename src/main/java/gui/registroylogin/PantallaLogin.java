@@ -1,18 +1,53 @@
 package gui.registroylogin;
 
-import gui.*;
+import Clases.persona.cliente.Cliente;
 import gui.opciones.PantallaInicio;
 import java.awt.BorderLayout;
-import gui.registroylogin.*;
 import gui.registroylogin.agenda.PantallaAgenda;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import logica.Listas;
 
 public class PantallaLogin extends javax.swing.JPanel {
+
+    //Atributos
+    private ArrayList<Cliente> listaClientesClase = new ArrayList<>();
+
+    private Map<String, String> baseClientesClase = new HashMap<>();
+
+    //Get & Set
+    public ArrayList<Cliente> getListaClientesClase() {
+        return listaClientesClase;
+    }
+
+    public void setListaClientesClase(ArrayList<Cliente> listaClientesClase) {
+        this.listaClientesClase = listaClientesClase;
+    }
+
+    public Map<String, String> getBaseClientesClase() {
+        return baseClientesClase;
+    }
+
+    public void setBaseClientesClase(Map<String, String> baseClientesClase) {
+        this.baseClientesClase = baseClientesClase;
+    }
 
     /**
      * Creates new form Login
      */
     public PantallaLogin() {
         initComponents();
+
+        if (Listas.getComienzoLogin() == 0) {
+
+            iniciarBaseClientes();
+            Listas.setListaClientes(Listas.crearListaInicialClientes());
+            Listas.setComienzoLogin(1);
+        }
+
+        traerBaseClientes();
+
     }
 
     /**
@@ -40,6 +75,8 @@ public class PantallaLogin extends javax.swing.JPanel {
         textoPrincipal = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         textoProovedores = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        textoError = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(350, 500));
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -86,14 +123,22 @@ public class PantallaLogin extends javax.swing.JPanel {
                 fieldPasswordMouseClicked(evt);
             }
         });
-        fieldPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPasswordActionPerformed(evt);
-            }
-        });
         jPanel3.add(fieldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 170, -1));
 
         botonVerPassword.setText("...");
+        botonVerPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonVerPasswordMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                botonVerPasswordMouseReleased(evt);
+            }
+        });
+        botonVerPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVerPasswordActionPerformed(evt);
+            }
+        });
         jPanel3.add(botonVerPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 20, -1));
 
         jPanel4.setOpaque(false);
@@ -138,6 +183,9 @@ public class PantallaLogin extends javax.swing.JPanel {
         });
         jPanel6.add(textoProovedores);
 
+        textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel1.add(textoError);
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -146,9 +194,11 @@ public class PantallaLogin extends javax.swing.JPanel {
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -162,9 +212,11 @@ public class PantallaLogin extends javax.swing.JPanel {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
@@ -189,11 +241,8 @@ public class PantallaLogin extends javax.swing.JPanel {
 
     private void fieldPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldPasswordMouseClicked
         // TODO add your handling code here:
+        fieldPassword.setEchoChar('*');
     }//GEN-LAST:event_fieldPasswordMouseClicked
-
-    private void fieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPasswordActionPerformed
 
     private void botonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistroActionPerformed
         // TODO add your handling code here:
@@ -202,21 +251,26 @@ public class PantallaLogin extends javax.swing.JPanel {
         p1.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
+        panelPrincipal.add(p1, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonRegistroActionPerformed
 
     private void botonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntrarActionPerformed
         // TODO add your handling code here:
-        PantallaInicio p1 = new PantallaInicio();
-        p1.setSize(350, 600);
-        p1.setLocation(0, 0);
+        if (verificarEspacios() == false) {
 
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+            textoError.setText("Debe diligenciar los campos");
+            
+        } else {
+            if (verificarIdentidad() == true) {
+                irPantallaInicio();
+            } else {
+                textoError.setText("Usuario y/o Contrasena Incorrectos");
+            }
+        }
+
+//        
     }//GEN-LAST:event_botonEntrarActionPerformed
 
     private void textoProovedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textoProovedoresMouseClicked
@@ -226,11 +280,81 @@ public class PantallaLogin extends javax.swing.JPanel {
         p2.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p2,BorderLayout.CENTER);
+        panelPrincipal.add(p2, BorderLayout.CENTER);
         panelPrincipal.revalidate();
-        panelPrincipal.repaint(); 
+        panelPrincipal.repaint();
     }//GEN-LAST:event_textoProovedoresMouseClicked
 
+    private void botonVerPasswordMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPasswordMousePressed
+        // TODO add your handling code here:
+        fieldPassword.setEchoChar((char) 0);
+    }//GEN-LAST:event_botonVerPasswordMousePressed
+
+    private void botonVerPasswordMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerPasswordMouseReleased
+        // TODO add your handling code here:
+        fieldPassword.setEchoChar('*');
+    }//GEN-LAST:event_botonVerPasswordMouseReleased
+
+    private void botonVerPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVerPasswordActionPerformed
+
+    //Mio
+    private boolean verificarIdentidad() {
+
+        boolean acceso = false;
+
+        String usuarioVerificar = fieldUsuario.getText();
+        String contrasenaVerificar = String.valueOf(fieldPassword.getPassword());
+
+        if (baseClientesClase.containsKey(usuarioVerificar)) {
+            System.out.println("si esta");
+            if (baseClientesClase.get(usuarioVerificar).equals(contrasenaVerificar)) {
+                acceso = true;
+            }
+
+        } else {
+            acceso = false;
+        }
+
+        return acceso;
+
+    }
+
+    private final void irPantallaInicio() {
+        PantallaInicio p1 = new PantallaInicio();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+
+    }
+
+    private void iniciarBaseClientes() {
+        Listas.getBaseClientes().put("a", "a");
+    }
+
+    private void traerBaseClientes() {
+        setBaseClientesClase(Listas.getBaseClientes());
+    }
+
+    private boolean verificarEspacios() {
+
+        boolean espaciosLlenos;
+
+        if (fieldUsuario.getText().isEmpty()
+                || String.valueOf(fieldPassword.getPassword()).isEmpty()) {
+
+            espaciosLlenos = false;
+        } else {
+            espaciosLlenos = true;
+        }
+
+        return espaciosLlenos;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonEntrar;
@@ -238,6 +362,7 @@ public class PantallaLogin extends javax.swing.JPanel {
     private javax.swing.JButton botonVerPassword;
     private javax.swing.JPasswordField fieldPassword;
     private javax.swing.JTextField fieldUsuario;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -246,8 +371,10 @@ public class PantallaLogin extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JLabel textoContrasena;
+    private javax.swing.JLabel textoError;
     private javax.swing.JLabel textoPrincipal;
     private javax.swing.JLabel textoProovedores;
     private javax.swing.JLabel textoUsuario;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -1,14 +1,42 @@
 package gui.registroylogin;
 
+import Clases.persona.cliente.Cliente;
 import java.awt.BorderLayout;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import logica.Listas;
 
 public class PantallaRegistro extends javax.swing.JPanel {
+
+    //Atributos
+    private Map<String, String> baseClientesClaseReg = new HashMap<>();
+    private ArrayList<Cliente> listaClientesClase = new ArrayList<>();
+
+    //Get & Set
+    public Map<String, String> getBaseClientesClaseReg() {
+        return baseClientesClaseReg;
+    }
+
+    public void setBaseClientesClaseReg(Map<String, String> baseClientesClaseReg) {
+        this.baseClientesClaseReg = baseClientesClaseReg;
+    }
+
+    public ArrayList<Cliente> getListaClientesClase() {
+        return listaClientesClase;
+    }
+
+    public void setListaClientesClase(ArrayList<Cliente> listaClientesClase) {
+        this.listaClientesClase = listaClientesClase;
+    }
 
     /**
      * Creates new form PantallaRegistro
      */
     public PantallaRegistro() {
         initComponents();
+        traerBaseClientes();
+        traerListaClientes();
     }
 
     /**
@@ -62,6 +90,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
         textoCorreo = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         botonRegistrarme = new javax.swing.JButton();
+        jPanel29 = new javax.swing.JPanel();
+        textoError = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         textoPrincipal = new javax.swing.JLabel();
         jPanel30 = new javax.swing.JPanel();
@@ -308,6 +338,9 @@ public class PantallaRegistro extends javax.swing.JPanel {
         });
         jPanel28.add(botonRegistrarme);
 
+        textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel29.add(textoError);
+
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -319,6 +352,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
             .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,9 +369,11 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -390,7 +426,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         add(panelPrincipal, java.awt.BorderLayout.CENTER);
@@ -398,20 +434,35 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaLogin p1 = new PantallaLogin();
-        p1.setSize(350, 600);
-        p1.setLocation(0, 0);
-        
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-
-        
+        volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
         // TODO add your handling code here:
+        if (verificarEspacios() == true) {
+            if (verificarSiExisteEnHashMap() == true) {
+
+                textoError.setText("El usuario ya existe");
+            } else {
+                if (verificarContrasenas() == true) {
+
+                    agregarClienteLista();
+                    agregarClienteHashMap();
+                    volverPantallaAnterior();
+
+                }else{
+                    textoError.setText("Las Contrasenas no coinciden");
+                }
+
+            }
+
+            for (int i = 0; i < Listas.getListaClientes().size(); i++) {
+                System.out.println(i);
+            }
+
+        } else {
+            textoError.setText("Debe diligenciar todos los campos de texto");
+        }
     }//GEN-LAST:event_botonRegistrarmeActionPerformed
 
     private void botonVerRepetirContrasenaMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerRepetirContrasenaMouseReleased
@@ -421,7 +472,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
     private void botonVerRepetirContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerRepetirContrasenaMousePressed
         // TODO add your handling code here:
-        fieldRepetirContrasena.setEchoChar((char)0);
+        fieldRepetirContrasena.setEchoChar((char) 0);
     }//GEN-LAST:event_botonVerRepetirContrasenaMousePressed
 
     private void fieldRepetirContrasenaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fieldRepetirContrasenaMouseClicked
@@ -440,7 +491,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
     private void botonVerContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonVerContrasenaMousePressed
         // TODO add your handling code here:
-        fieldContrasena.setEchoChar((char)0);
+        fieldContrasena.setEchoChar((char) 0);
     }//GEN-LAST:event_botonVerContrasenaMousePressed
 
     private void fieldContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldContrasenaActionPerformed
@@ -452,6 +503,99 @@ public class PantallaRegistro extends javax.swing.JPanel {
         fieldContrasena.setEchoChar('*');
     }//GEN-LAST:event_fieldContrasenaMouseClicked
 
+    //Mio
+    private void traerBaseClientes() {
+        setBaseClientesClaseReg(Listas.getBaseClientes());
+    }
+
+    private void traerListaClientes() {
+
+        setListaClientesClase(Listas.getListaClientes());
+
+    }
+
+    private boolean verificarEspacios() {
+
+        boolean espaciosLlenos;
+
+        if (fieldUsuario.getText().isEmpty()
+                || String.valueOf(fieldContrasena.getPassword()).isEmpty()
+                || String.valueOf(fieldRepetirContrasena.getPassword()).isEmpty()
+                || fieldNombre.getText().isEmpty()
+                || fieldCelular.getText().isEmpty()
+                || fieldCorreo.getText().isEmpty()) {
+
+            espaciosLlenos = false;
+        } else {
+            espaciosLlenos = true;
+        }
+
+        return espaciosLlenos;
+    }
+
+    private boolean verificarSiExisteEnHashMap() {
+
+        boolean existeElUsuario = false;
+
+        if (baseClientesClaseReg.containsKey(fieldUsuario.getText()) == true) {
+
+            existeElUsuario = true;
+        }
+
+        return existeElUsuario;
+
+    }
+
+    private void agregarClienteLista() {
+        ArrayList<Cliente> listaClientesLocal = new ArrayList<>();
+
+        listaClientesLocal = listaClientesClase;
+
+        Cliente nuevoCliente = new Cliente();
+        nuevoCliente.setUsuario(fieldUsuario.getText());
+        nuevoCliente.setContrasena(String.valueOf(fieldContrasena.getPassword()));
+        nuevoCliente.setNombre(fieldNombre.getText());
+        nuevoCliente.setCelular(fieldCelular.getText());
+        nuevoCliente.setCorreo(fieldCorreo.getText());
+
+        listaClientesLocal.add(nuevoCliente);
+        Listas.setListaClientes(listaClientesLocal);
+
+    }
+
+    private void agregarClienteHashMap() {
+        Map<String, String> baseClientesLocal = new HashMap<>();
+
+        baseClientesLocal = baseClientesClaseReg;
+
+        baseClientesLocal.put(fieldUsuario.getText(), String.valueOf(fieldContrasena.getPassword()));
+
+        Listas.setBaseClientes(baseClientesLocal);
+
+    }
+
+    private boolean verificarContrasenas() {
+
+        boolean contrasenasIguales = false;
+
+        if (String.valueOf(fieldContrasena.getPassword()).equals(String.valueOf(fieldRepetirContrasena.getPassword()))) {
+
+            contrasenasIguales = true;
+        }
+
+        return contrasenasIguales;
+    }
+
+    private final void volverPantallaAnterior() {
+        PantallaLogin p1 = new PantallaLogin();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
@@ -484,6 +628,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
@@ -496,9 +641,11 @@ public class PantallaRegistro extends javax.swing.JPanel {
     private javax.swing.JLabel textoCelular;
     private javax.swing.JLabel textoContrasena;
     private javax.swing.JLabel textoCorreo;
+    private javax.swing.JLabel textoError;
     private javax.swing.JLabel textoNombre;
     private javax.swing.JLabel textoPrincipal;
     private javax.swing.JLabel textoRepetirContrasena;
     private javax.swing.JLabel textoUsuario;
     // End of variables declaration//GEN-END:variables
+
 }

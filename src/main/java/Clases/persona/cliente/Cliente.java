@@ -6,7 +6,7 @@ public class Cliente extends Persona {
 
     //Atributos
     private String usuario;
-    private String contraseña;
+    private String contrasena;
 
     
     //Constructor
@@ -18,7 +18,7 @@ public class Cliente extends Persona {
     public Cliente(String usuario, String contraseña, String nombre, String celular, String correo) {
         super(nombre, celular, correo);
         this.usuario = usuario;
-        this.contraseña = contraseña;
+        this.contrasena = contraseña;
     }
     
     
@@ -31,12 +31,12 @@ public class Cliente extends Persona {
         this.usuario = usuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
 }

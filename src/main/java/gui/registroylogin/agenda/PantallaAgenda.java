@@ -27,10 +27,10 @@ public class PantallaAgenda extends javax.swing.JPanel {
      */
     public PantallaAgenda() {
         
-        if (Listas.getComienzo() == 0) {
+        if (Listas.getComienzoAgenda()== 0) {
             
             Listas.setListaProveedores(Listas.crearListaInicial());
-            Listas.setComienzo(1);
+            Listas.setComienzoAgenda(1);
             
         }
         
