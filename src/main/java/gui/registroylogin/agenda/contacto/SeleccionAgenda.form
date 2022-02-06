@@ -155,17 +155,6 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="botonPersonaNatural">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Persona Natural"/>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[120, 50]"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPersonaNaturalActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JButton" name="botonEmpresa">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Empresa"/>
@@ -175,6 +164,17 @@
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEmpresaActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="botonPersonaNatural">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Persona Natural"/>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[120, 50]"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPersonaNaturalActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>

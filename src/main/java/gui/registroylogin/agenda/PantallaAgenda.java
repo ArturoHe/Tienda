@@ -17,7 +17,7 @@ public class PantallaAgenda extends javax.swing.JPanel {
     public ArrayList<Proveedor> getListaProveedoresClase() {
         return listaProveedoresClase;
     }
-
+    
     public void setListaProveedoresClase(ArrayList<Proveedor> listaProveedoresClase) {
         this.listaProveedoresClase = listaProveedoresClase;
     }
@@ -26,22 +26,22 @@ public class PantallaAgenda extends javax.swing.JPanel {
      * Creates new form Login
      */
     public PantallaAgenda() {
-
+        
         if (Listas.getComienzo() == 0) {
-
+            
             Listas.setListaProveedores(Listas.crearListaInicial());
             Listas.setComienzo(1);
-
+            
         }
-
+        
         setListaProveedoresClase(Listas.getListaProveedores());
-
+        
         initComponents();
         limpiarLista();
         iniciarLista(getListaProveedoresClase());
-
+        
         System.out.println(Listas.getListaProveedores());
-
+        
     }
 
     /**
@@ -114,6 +114,11 @@ public class PantallaAgenda extends javax.swing.JPanel {
         jPanel4.setBackground(new java.awt.Color(255, 204, 204));
 
         botonVer.setText("Ver");
+        botonVer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVerActionPerformed(evt);
+            }
+        });
         jPanel5.add(botonVer);
 
         botonEditar.setText("Editar");
@@ -216,7 +221,7 @@ public class PantallaAgenda extends javax.swing.JPanel {
         PantallaLogin p4 = new PantallaLogin();
         p4.setSize(350, 600);
         p4.setLocation(0, 0);
-
+        
         panelPrincipal.removeAll();
         panelPrincipal.add(p4, BorderLayout.CENTER);
         panelPrincipal.revalidate();
@@ -228,7 +233,7 @@ public class PantallaAgenda extends javax.swing.JPanel {
         SeleccionAgenda p4 = new SeleccionAgenda();
         p4.setSize(350, 600);
         p4.setLocation(0, 0);
-
+        
         panelPrincipal.removeAll();
         panelPrincipal.add(p4, BorderLayout.CENTER);
         panelPrincipal.revalidate();
@@ -246,55 +251,89 @@ public class PantallaAgenda extends javax.swing.JPanel {
     private void listaContactosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaContactosMouseClicked
         // TODO add your handling code here:
         System.out.println(listaContactos.getSelectedIndex());
+        System.out.println(listaContactos.getSelectedValue());
     }//GEN-LAST:event_listaContactosMouseClicked
+
+    private void botonVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerActionPerformed
+        // TODO add your handling code here:
+
+        if (listaProveedoresClase.get(listaContactos.getSelectedIndex()).getClass() == ProveedorEmpresa.class) {
+            
+            VerAgendaEmpresa.setIndex(listaContactos.getSelectedIndex());
+
+            VerAgendaEmpresa p1 = new VerAgendaEmpresa();
+            p1.setSize(350, 600);
+            p1.setLocation(0, 0);
+            
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p1, BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint();
+            
+        } else if(listaProveedoresClase.get(listaContactos.getSelectedIndex()).getClass() == ProveedorPersonaNatural.class) {
+
+            VerAgendaPersonaNatural.setIndex(listaContactos.getSelectedIndex());
+
+            VerAgendaPersonaNatural p1 = new VerAgendaPersonaNatural();
+            p1.setSize(350, 600);
+            p1.setLocation(0, 0);
+            
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p1, BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint();
+            System.out.println("Persona");
+            
+        }
+    }//GEN-LAST:event_botonVerActionPerformed
 
     //Mio
     public DefaultListModel agregarDato() {
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
-
+        
         return modelo;
     }
-
+    
     public DefaultListModel limpiarLista() {
-
+        
         DefaultListModel modelo = new DefaultListModel();
         listaContactos.setModel(modelo);
         return modelo;
     }
-
+    
     public DefaultListModel iniciarLista(ArrayList listaExterna) {
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
-
+        
         ArrayList<Proveedor> listaLocal = new ArrayList<>();
         listaLocal = listaExterna;
-
+        
         for (int i = 0; i < listaLocal.size(); i++) {
-
+            
             modelo.addElement(listaLocal.get(i).getNombre());;
-
+            
         }
         return modelo;
     }
-
+    
     public DefaultListModel eliminarDato() {
-
+        
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
         modelo.remove(listaContactos.getSelectedIndex());
         return modelo;
     }
-
+    
     public void eliminarDatoDeLista() {
-
+        
         ArrayList<Proveedor> listaLocal = new ArrayList<>();
         listaLocal = getListaProveedoresClase();
-
+        
         int indexSeleccionado = listaContactos.getSelectedIndex();
         listaLocal.remove(indexSeleccionado);
         System.out.println("eliminado");
-
+        
         setListaProveedoresClase(listaLocal);
         System.out.println(getListaProveedoresClase());
-
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

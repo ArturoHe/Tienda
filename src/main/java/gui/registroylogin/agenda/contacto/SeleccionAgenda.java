@@ -33,8 +33,8 @@ public class SeleccionAgenda extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         botonAtras = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        botonPersonaNatural = new javax.swing.JButton();
         botonEmpresa = new javax.swing.JButton();
+        botonPersonaNatural = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(350, 500));
         setMinimumSize(new java.awt.Dimension(350, 600));
@@ -81,15 +81,6 @@ public class SeleccionAgenda extends javax.swing.JPanel {
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 0));
 
-        botonPersonaNatural.setText("Persona Natural");
-        botonPersonaNatural.setPreferredSize(new java.awt.Dimension(120, 50));
-        botonPersonaNatural.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonPersonaNaturalActionPerformed(evt);
-            }
-        });
-        jPanel7.add(botonPersonaNatural);
-
         botonEmpresa.setText("Empresa");
         botonEmpresa.setPreferredSize(new java.awt.Dimension(120, 50));
         botonEmpresa.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +89,15 @@ public class SeleccionAgenda extends javax.swing.JPanel {
             }
         });
         jPanel7.add(botonEmpresa);
+
+        botonPersonaNatural.setText("Persona Natural");
+        botonPersonaNatural.setPreferredSize(new java.awt.Dimension(120, 50));
+        botonPersonaNatural.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPersonaNaturalActionPerformed(evt);
+            }
+        });
+        jPanel7.add(botonPersonaNatural);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

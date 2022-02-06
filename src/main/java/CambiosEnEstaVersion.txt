@@ -1,5 +1,4 @@
-Ver 1.2.2
+Ver 1.3
 
--Agregada la clase Producto
--Agregados abstract Proveedor,Persona, Producto.
--Ahora se puede Agregar Proveedores del tipo Persona natural a la agenda
+-Terminada Funcion de Agregar Proveedores a la Agenda
+-Implementada y Terminada Funcion de ver los datos de los Proveedores

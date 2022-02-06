@@ -1,12 +1,11 @@
 package gui.registroylogin.agenda.contacto;
 
+import Clases.persona.proveedor.Proveedor;
+import Clases.persona.proveedor.ProveedorEmpresa;
 import gui.registroylogin.agenda.*;
-import gui.registroylogin.*;
-import gui.*;
-import gui.opciones.PantallaInicio;
 import java.awt.BorderLayout;
-import gui.registroylogin.*;
-import javax.swing.*;
+import java.util.ArrayList;
+import logica.Listas;
 
 public class RegistroAgendaEmpresa extends javax.swing.JPanel {
 
@@ -44,7 +43,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel19 = new javax.swing.JPanel();
         fieldNombre = new javax.swing.JTextField();
         jPanel20 = new javax.swing.JPanel();
-        textoNombre = new javax.swing.JLabel();
+        textoNombreEncargado = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
@@ -96,7 +95,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel54 = new javax.swing.JPanel();
         jPanel55 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
-        checkDocs = new javax.swing.JCheckBox();
+        checkDocsenRegla = new javax.swing.JCheckBox();
         jPanel57 = new javax.swing.JPanel();
         textoDocsenRegla = new javax.swing.JLabel();
 
@@ -113,7 +112,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        textoPrincipal.setText("Registro Personas");
+        textoPrincipal.setText("Registro Empresa");
         jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
@@ -154,6 +153,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         });
         jPanel29.add(botonRegistrarme);
 
+        textoErrorRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPanel4.add(textoErrorRegistro);
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -168,8 +168,8 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
 
         jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        textoNombre.setText("Nombre");
-        jPanel20.add(textoNombre);
+        textoNombreEncargado.setText("Nombre Encargado");
+        jPanel20.add(textoNombreEncargado);
 
         jPanel18.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
 
@@ -433,16 +433,16 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel55.setBackground(new java.awt.Color(255, 255, 51));
         jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        checkDocs.addActionListener(new java.awt.event.ActionListener() {
+        checkDocsenRegla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkDocsActionPerformed(evt);
+                checkDocsenReglaActionPerformed(evt);
             }
         });
-        jPanel56.add(checkDocs);
+        jPanel56.add(checkDocsenRegla);
 
         jPanel55.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        textoDocsenRegla.setText("Doc. en Regla");
+        textoDocsenRegla.setText("Docs. en Regla");
         jPanel57.add(textoDocsenRegla);
 
         jPanel55.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
@@ -580,7 +580,16 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         // TODO add your handling code here:
         if (verificarEspacios() == true) {
 
-            System.out.println("llenos");
+            Listas.setListaProveedores(agregarProveedor(Listas.getListaProveedores()));
+
+            PantallaAgenda p2 = new PantallaAgenda();
+            p2.setSize(350, 600);
+            p2.setLocation(0, 0);
+
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p2, BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint();
 
         } else {
 
@@ -588,9 +597,9 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_botonRegistrarmeActionPerformed
 
-    private void checkDocsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDocsActionPerformed
+    private void checkDocsenReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDocsenReglaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_checkDocsActionPerformed
+    }//GEN-LAST:event_checkDocsenReglaActionPerformed
 
     //Mio
     public boolean verificarEspacios() {
@@ -618,11 +627,36 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         return espaciosLlenos;
     }
 
+    public ArrayList agregarProveedor(ArrayList listaPrincipal) {
+
+        ArrayList<Proveedor> listaLocal = new ArrayList<>();
+
+        listaLocal = listaPrincipal;
+
+        ProveedorEmpresa nuevoProveedor = new ProveedorEmpresa();
+
+        nuevoProveedor.setNombre(fieldNombre.getText());
+        nuevoProveedor.setCelular(fieldCelular.getText());
+        nuevoProveedor.setCorreo(fieldCorreo.getText());
+        nuevoProveedor.setProducto(fieldProducto.getText());
+        nuevoProveedor.setPais(fieldPais.getText());
+        nuevoProveedor.setCiudad(fieldCiudad.getText());
+        nuevoProveedor.setDireccion(fieldDireccion.getText());
+        nuevoProveedor.setNit(Integer.parseInt(fieldNit.getText()));
+        nuevoProveedor.setRepresentanteLegal(fieldRepLegal.getText());
+        nuevoProveedor.setDocumentosEnRegla(checkDocsenRegla.isSelected());
+
+        listaLocal.add(nuevoProveedor);
+
+        return listaLocal;
+
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
     private javax.swing.JButton botonRegistrarme;
-    private javax.swing.JCheckBox checkDocs;
+    private javax.swing.JCheckBox checkDocsenRegla;
     private javax.swing.JTextField fieldCelular;
     private javax.swing.JTextField fieldCiudad;
     private javax.swing.JTextField fieldCorreo;
@@ -688,7 +722,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JLabel textoDocsenRegla;
     private javax.swing.JLabel textoErrorRegistro;
     private javax.swing.JLabel textoNit;
-    private javax.swing.JLabel textoNombre;
+    private javax.swing.JLabel textoNombreEncargado;
     private javax.swing.JLabel textoPais;
     private javax.swing.JLabel textoPrincipal;
     private javax.swing.JLabel textoProducto;

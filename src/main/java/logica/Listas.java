@@ -52,13 +52,13 @@ public class Listas {
                                                             "3216519888", "manifiesta@cmecc.com");
 
         ProveedorPersonaNatural mielMontaña = new ProveedorPersonaNatural(489516599, "Lunes", false, "Miel de la Montaña", "Colombia", "Anori",
-                                                                        "Cll 1 #8 - 10", "Miel de la Montaña", "31891658", "mielmontaña@gmil.com");
+                                                                        "Cll 1 #8 - 10", "Mauricio Torres - Miel de la Montaña", "31891658", "mielmontaña@gmil.com");
         
         ProveedorPersonaNatural confeccionesLaMontaña = new ProveedorPersonaNatural(569485698, "Miercoles", true, "Ropa", "Colombia", "Anori",
-                                                                        "Cll 3 #8 - 06", "Confecciones La Montaña", "3054297748", "atencion@confemon.com");
+                                                                        "Cll 3 #8 - 06", "Diana Gomez - Confecciones La Montaña", "3054297748", "atencion@confemon.com");
         
         ProveedorPersonaNatural laRoja = new ProveedorPersonaNatural(889149885, "Viernes", true, "Cerveza La Roja", "Colombia", "Vereda la Fila",
-                                                                        "Km 4 via Principal", "Cerveza La Roja", "31891658", "laroja@gmil.com");
+                                                                        "Km 4 via Principal", "Carlos Bejarano - Cerveza La Roja", "31891658", "laroja@gmil.com");
 
         listaContactos.add(manifiesta);
         listaContactos.add(tercerAcuerdo);
