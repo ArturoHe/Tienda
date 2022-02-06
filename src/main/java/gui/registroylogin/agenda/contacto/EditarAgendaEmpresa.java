@@ -1,19 +1,32 @@
 package gui.registroylogin.agenda.contacto;
 
-import Clases.persona.proveedor.Proveedor;
 import Clases.persona.proveedor.ProveedorEmpresa;
-import gui.registroylogin.agenda.*;
+import gui.registroylogin.agenda.PantallaAgenda;
 import java.awt.BorderLayout;
-import java.util.ArrayList;
 import logica.Listas;
 
-public class RegistroAgendaEmpresa extends javax.swing.JPanel {
+public class EditarAgendaEmpresa extends javax.swing.JPanel {
+
+    //Atributos
+    private static int index;
+
+    //Get & Set
+    public static int getIndex() {
+        return index;
+    }
+    
+    public static void setIndex(int aIndex) {
+        index = aIndex;
+    }
 
     /**
      * Creates new form Login
      */
-    public RegistroAgendaEmpresa() {
+    public EditarAgendaEmpresa() {
+        
         initComponents();
+        verDatos();
+        
     }
 
     /**
@@ -32,10 +45,11 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         botonAtras = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
-        jPanel29 = new javax.swing.JPanel();
-        botonRegistrarme = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        textoErrorRegistro = new javax.swing.JLabel();
+        textoError = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        botonCancelar = new javax.swing.JButton();
+        botonConfirmarCambio = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jPanel5 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -112,7 +126,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        textoPrincipal.setText("Registro Empresa");
+        textoPrincipal.setText("Editar Empresa");
         jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
@@ -145,16 +159,26 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
 
         jPanel16.setBackground(new java.awt.Color(255, 255, 255));
 
-        botonRegistrarme.setText("Registrar Contacto");
-        botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
+        textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel4.add(textoError);
+
+        botonCancelar.setText("Cancelar");
+        botonCancelar.setPreferredSize(new java.awt.Dimension(130, 25));
+        botonCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonRegistrarmeActionPerformed(evt);
+                botonCancelarActionPerformed(evt);
             }
         });
-        jPanel29.add(botonRegistrarme);
+        jPanel6.add(botonCancelar);
 
-        textoErrorRegistro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPanel4.add(textoErrorRegistro);
+        botonConfirmarCambio.setText("Confirmar Cambio");
+        botonConfirmarCambio.setPreferredSize(new java.awt.Dimension(130, 25));
+        botonConfirmarCambio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonConfirmarCambioActionPerformed(evt);
+            }
+        });
+        jPanel6.add(botonConfirmarCambio);
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -168,7 +192,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
 
         jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
-        textoNombreEncargado.setText("Nombre Encargado");
+        textoNombreEncargado.setText("Nombre Empresa");
         jPanel20.add(textoNombreEncargado);
 
         jPanel18.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 28));
@@ -480,7 +504,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                     .addComponent(jPanel38, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel42, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel46, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addGap(0, 36, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -505,7 +529,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         jScrollPane3.setViewportView(jPanel5);
@@ -514,22 +538,26 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 12, Short.MAX_VALUE))
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(83, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -569,29 +597,92 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
         volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
-    private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
-        // TODO add your handling code here:
-        if (verificarEspacios() == true) {
-
-            Listas.setListaProveedores(agregarProveedor(Listas.getListaProveedores()));
-
-            terminarRegistro();
-
-        } else {
-
-            textoErrorRegistro.setText("Debe diligenciar todos los espacios de texto");
-        }
-    }//GEN-LAST:event_botonRegistrarmeActionPerformed
-
     private void checkDocsenReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDocsenReglaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_checkDocsenReglaActionPerformed
 
+    private void botonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelarActionPerformed
+        // TODO add your handling code here:
+        volverPantallaAnterior();
+    }//GEN-LAST:event_botonCancelarActionPerformed
+
+    private void botonConfirmarCambioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConfirmarCambioActionPerformed
+        // TODO add your handling code here:
+        if (verificarEspacios() == true) {
+            hacerCambios();
+        }else{
+            textoError.setText("Debe diligenciar todos los espacios de texto");
+        }
+        
+    }//GEN-LAST:event_botonConfirmarCambioActionPerformed
+
     //Mio
+    private void verDatos() {
+        
+        fieldNombre.setText(Listas.getListaProveedores().get(index).getNombre());
+        fieldCelular.setText(Listas.getListaProveedores().get(index).getCelular());
+        fieldCorreo.setText(Listas.getListaProveedores().get(index).getCorreo());
+        fieldProducto.setText(Listas.getListaProveedores().get(index).getProducto());
+        fieldPais.setText(Listas.getListaProveedores().get(index).getPais());
+        fieldCiudad.setText(Listas.getListaProveedores().get(index).getCiudad());
+        fieldDireccion.setText(Listas.getListaProveedores().get(index).getDireccion());
+        
+        if (Listas.getListaProveedores().get(index) instanceof ProveedorEmpresa) {
+            ProveedorEmpresa tmp = (ProveedorEmpresa) Listas.getListaProveedores().get(index);
+            
+            fieldNit.setText(Integer.toString(tmp.getNit()));
+            fieldRepLegal.setText(tmp.getRepresentanteLegal());
+            checkDocsenRegla.setSelected(tmp.isDocumentosEnRegla());
+            
+        }
+        
+    }
+    
+    private void hacerCambios() {
+        
+        Listas.getListaProveedores().get(index).setNombre(fieldNombre.getText());
+        Listas.getListaProveedores().get(index).setCelular(fieldCelular.getText());
+        Listas.getListaProveedores().get(index).setCorreo(fieldCorreo.getText());
+        Listas.getListaProveedores().get(index).setProducto(fieldProducto.getText());
+        Listas.getListaProveedores().get(index).setPais(fieldPais.getText());
+        Listas.getListaProveedores().get(index).setCiudad(fieldCiudad.getText());
+        Listas.getListaProveedores().get(index).setDireccion(fieldDireccion.getText());
+        
+        if (Listas.getListaProveedores().get(index) instanceof ProveedorEmpresa) {
+            ProveedorEmpresa tmp = (ProveedorEmpresa) Listas.getListaProveedores().get(index);
+            
+            tmp.setNit(Integer.parseInt(fieldNit.getText()));
+            tmp.setRepresentanteLegal(fieldRepLegal.getText());
+            tmp.setDocumentosEnRegla(checkDocsenRegla.isSelected());
+            
+        }
+        
+        PantallaAgenda p1 = new PantallaAgenda();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+        
+    }
+    
+    private void volverPantallaAnterior() {
+        PantallaAgenda p1 = new PantallaAgenda();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
+        
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
+    
     private boolean verificarEspacios() {
-
+        
         boolean espaciosLlenos;
-
+        
         if (fieldCelular.getText().isEmpty()
                 || fieldCiudad.getText().isEmpty()
                 || fieldCorreo.getText().isEmpty()
@@ -602,67 +693,21 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
                 || fieldProducto.getText().isEmpty()
                 || fieldCelular.getText().isEmpty()
                 || fieldRepLegal.getText().isEmpty()) {
-
+            
             espaciosLlenos = false;
-
+            
         } else {
-
+            
             espaciosLlenos = true;
         }
-
+        
         return espaciosLlenos;
-    }
-
-    public ArrayList agregarProveedor(ArrayList listaPrincipal) {
-
-        ArrayList<Proveedor> listaLocal = new ArrayList<>();
-
-        listaLocal = listaPrincipal;
-
-        ProveedorEmpresa nuevoProveedor = new ProveedorEmpresa();
-
-        nuevoProveedor.setNombre(fieldNombre.getText());
-        nuevoProveedor.setCelular(fieldCelular.getText());
-        nuevoProveedor.setCorreo(fieldCorreo.getText());
-        nuevoProveedor.setProducto(fieldProducto.getText());
-        nuevoProveedor.setPais(fieldPais.getText());
-        nuevoProveedor.setCiudad(fieldCiudad.getText());
-        nuevoProveedor.setDireccion(fieldDireccion.getText());
-        nuevoProveedor.setNit(Integer.parseInt(fieldNit.getText()));
-        nuevoProveedor.setRepresentanteLegal(fieldRepLegal.getText());
-        nuevoProveedor.setDocumentosEnRegla(checkDocsenRegla.isSelected());
-
-        listaLocal.add(nuevoProveedor);
-
-        return listaLocal;
-
-    }
-
-    private final void volverPantallaAnterior() {
-        SeleccionAgenda p1 = new SeleccionAgenda();
-        p1.setSize(350, 600);
-        p1.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p1, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
-    }
-
-    private final void terminarRegistro() {
-        PantallaAgenda p2 = new PantallaAgenda();
-        p2.setSize(350, 600);
-        p2.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p2, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
-    private javax.swing.JButton botonRegistrarme;
+    private javax.swing.JButton botonCancelar;
+    private javax.swing.JButton botonConfirmarCambio;
     private javax.swing.JCheckBox checkDocsenRegla;
     private javax.swing.JTextField fieldCelular;
     private javax.swing.JTextField fieldCiudad;
@@ -688,7 +733,6 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
@@ -720,6 +764,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JLabel textoCelular;
@@ -727,7 +772,7 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JLabel textoCorreo;
     private javax.swing.JLabel textoDireccion;
     private javax.swing.JLabel textoDocsenRegla;
-    private javax.swing.JLabel textoErrorRegistro;
+    private javax.swing.JLabel textoError;
     private javax.swing.JLabel textoNit;
     private javax.swing.JLabel textoNombreEncargado;
     private javax.swing.JLabel textoPais;
@@ -735,4 +780,5 @@ public class RegistroAgendaEmpresa extends javax.swing.JPanel {
     private javax.swing.JLabel textoProducto;
     private javax.swing.JLabel textoRepLegal;
     // End of variables declaration//GEN-END:variables
+
 }

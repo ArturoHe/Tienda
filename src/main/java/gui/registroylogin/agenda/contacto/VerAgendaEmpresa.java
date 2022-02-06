@@ -570,14 +570,7 @@ public class VerAgendaEmpresa extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaAgenda p4 = new PantallaAgenda();
-        p4.setSize(350, 600);
-        p4.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p4, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void checkDocsenReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDocsenReglaActionPerformed
@@ -585,7 +578,7 @@ public class VerAgendaEmpresa extends javax.swing.JPanel {
     }//GEN-LAST:event_checkDocsenReglaActionPerformed
 
     //Mio
-    public void verDatos() {
+    private void verDatos() {
 
         fieldNombre.setText(Listas.getListaProveedores().get(index).getNombre());
         fieldCelular.setText(Listas.getListaProveedores().get(index).getCelular());
@@ -606,6 +599,16 @@ public class VerAgendaEmpresa extends javax.swing.JPanel {
 
     }
 
+    private final void volverPantallaAnterior() {
+        PantallaAgenda p4 = new PantallaAgenda();
+        p4.setSize(350, 600);
+        p4.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p4, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;

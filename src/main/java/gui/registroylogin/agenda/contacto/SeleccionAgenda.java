@@ -48,8 +48,8 @@ public class SeleccionAgenda extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        textoPrincipal.setText("Agenda");
-        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 90, 40));
+        textoPrincipal.setText("Selecione el Tipo");
+        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, 200, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -132,30 +132,34 @@ public class SeleccionAgenda extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaLogin p1 = new PantallaLogin();
-        p1.setSize(350, 600);
-        p1.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonPersonaNaturalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPersonaNaturalActionPerformed
         // TODO add your handling code here:
-        RegistroAgendaPersona p2 = new RegistroAgendaPersona();
-        p2.setSize(350, 600);
-        p2.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p2,BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        irRegistroPersonas();
     }//GEN-LAST:event_botonPersonaNaturalActionPerformed
 
     private void botonEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpresaActionPerformed
         // TODO add your handling code here:
+        irRegistroEmpresas();
+    }//GEN-LAST:event_botonEmpresaActionPerformed
+    
+    
+    //Mio
+    
+    private final void volverPantallaAnterior() {
+        PantallaAgenda p2 = new PantallaAgenda();
+        p2.setSize(350, 600);
+        p2.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p2, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
+    
+    private final void irRegistroEmpresas() {
         RegistroAgendaEmpresa p3 = new RegistroAgendaEmpresa();
         p3.setSize(350, 600);
         p3.setLocation(0, 0);
@@ -164,11 +168,18 @@ public class SeleccionAgenda extends javax.swing.JPanel {
         panelPrincipal.add(p3,BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
-    }//GEN-LAST:event_botonEmpresaActionPerformed
+    }
     
-    
-    //Mio
-    
+    private final void irRegistroPersonas() {
+        RegistroAgendaPersona p2 = new RegistroAgendaPersona();
+        p2.setSize(350, 600);
+        p2.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p2,BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;

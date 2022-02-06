@@ -113,8 +113,8 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        textoPrincipal.setText("Registro Personas");
-        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 40));
+        textoPrincipal.setText("Registro Persona Natural");
+        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, -1, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -154,6 +154,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         });
         jPanel29.add(botonRegistrarme);
 
+        textoErrorRegistro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel4.add(textoErrorRegistro);
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -514,12 +515,12 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 12, Short.MAX_VALUE))
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,9 +528,9 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -566,14 +567,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        SeleccionAgenda p4 = new SeleccionAgenda();
-        p4.setSize(350, 600);
-        p4.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p4, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
     private void botonRegistrarmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarmeActionPerformed
@@ -582,14 +576,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
 
             Listas.setListaProveedores(agregarProveedor(Listas.getListaProveedores()));
             
-            PantallaAgenda p2 = new PantallaAgenda();
-            p2.setSize(350, 600);
-            p2.setLocation(0, 0);
-
-            panelPrincipal.removeAll();
-            panelPrincipal.add(p2,BorderLayout.CENTER);
-            panelPrincipal.revalidate();
-            panelPrincipal.repaint(); 
+            terminarRegistro();
 
         } else {
 
@@ -602,7 +589,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
     }//GEN-LAST:event_checkActivoActionPerformed
 
     //Mio
-    public boolean verificarEspacios() {
+    private boolean verificarEspacios() {
 
         boolean espaciosLlenos;
 
@@ -627,7 +614,7 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         return espaciosLlenos;
     }
 
-    public ArrayList agregarProveedor(ArrayList listaPrincipal) {
+    private ArrayList agregarProveedor(ArrayList listaPrincipal) {
         
         ArrayList<Proveedor> listaLocal = new ArrayList<>();
         
@@ -650,6 +637,28 @@ public class RegistroAgendaPersona extends javax.swing.JPanel {
         
         return listaLocal;
 
+    }
+    
+    private final void volverPantallaAnterior() {
+        SeleccionAgenda p1 = new SeleccionAgenda();
+        p1.setSize(350, 600);
+        p1.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
+
+    private final void terminarRegistro() {
+        PantallaAgenda p2 = new PantallaAgenda();
+        p2.setSize(350, 600);
+        p2.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p2, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
     }
 
 

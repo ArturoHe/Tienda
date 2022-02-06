@@ -122,6 +122,11 @@ public class PantallaAgenda extends javax.swing.JPanel {
         jPanel5.add(botonVer);
 
         botonEditar.setText("Editar");
+        botonEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEditarActionPerformed(evt);
+            }
+        });
         jPanel5.add(botonEditar);
 
         botonAgregar.setText("Agregar");
@@ -287,21 +292,53 @@ public class PantallaAgenda extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_botonVerActionPerformed
 
+    private void botonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEditarActionPerformed
+        // TODO add your handling code here:
+        if (listaProveedoresClase.get(listaContactos.getSelectedIndex()).getClass() == ProveedorEmpresa.class) {
+            
+            EditarAgendaEmpresa.setIndex(listaContactos.getSelectedIndex());
+
+            EditarAgendaEmpresa p1 = new EditarAgendaEmpresa();
+            p1.setSize(350, 600);
+            p1.setLocation(0, 0);
+            
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p1, BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint();
+            
+        } else if(listaProveedoresClase.get(listaContactos.getSelectedIndex()).getClass() == ProveedorPersonaNatural.class) {
+
+            EditarAgendaPersonaNatural.setIndex(listaContactos.getSelectedIndex());
+
+            EditarAgendaPersonaNatural p1 = new EditarAgendaPersonaNatural();
+            p1.setSize(350, 600);
+            p1.setLocation(0, 0);
+            
+            panelPrincipal.removeAll();
+            panelPrincipal.add(p1, BorderLayout.CENTER);
+            panelPrincipal.revalidate();
+            panelPrincipal.repaint();
+            System.out.println("Persona");
+            
+        }
+    }//GEN-LAST:event_botonEditarActionPerformed
+
     //Mio
-    public DefaultListModel agregarDato() {
+    private DefaultListModel agregarDato() {
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
         
         return modelo;
     }
     
-    public DefaultListModel limpiarLista() {
+    private DefaultListModel limpiarLista() {
         
         DefaultListModel modelo = new DefaultListModel();
         listaContactos.setModel(modelo);
         return modelo;
     }
     
-    public DefaultListModel iniciarLista(ArrayList listaExterna) {
+    private DefaultListModel iniciarLista(ArrayList listaExterna) {
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
         
         ArrayList<Proveedor> listaLocal = new ArrayList<>();
@@ -315,14 +352,14 @@ public class PantallaAgenda extends javax.swing.JPanel {
         return modelo;
     }
     
-    public DefaultListModel eliminarDato() {
+    private DefaultListModel eliminarDato() {
         
         DefaultListModel modelo = (DefaultListModel) listaContactos.getModel();
         modelo.remove(listaContactos.getSelectedIndex());
         return modelo;
     }
     
-    public void eliminarDatoDeLista() {
+    private void eliminarDatoDeLista() {
         
         ArrayList<Proveedor> listaLocal = new ArrayList<>();
         listaLocal = getListaProveedoresClase();
@@ -335,6 +372,7 @@ public class PantallaAgenda extends javax.swing.JPanel {
         System.out.println(getListaProveedoresClase());
         
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAgregar;

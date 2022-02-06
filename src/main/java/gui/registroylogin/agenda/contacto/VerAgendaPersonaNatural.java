@@ -94,19 +94,19 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         jPanel46 = new javax.swing.JPanel();
         jPanel47 = new javax.swing.JPanel();
         jPanel48 = new javax.swing.JPanel();
-        fieldNit = new javax.swing.JTextField();
+        fieldCedula = new javax.swing.JTextField();
         jPanel49 = new javax.swing.JPanel();
         textoCedula = new javax.swing.JLabel();
         jPanel50 = new javax.swing.JPanel();
         jPanel51 = new javax.swing.JPanel();
         jPanel52 = new javax.swing.JPanel();
-        fieldRepLegal = new javax.swing.JTextField();
+        fieldDiaEntregas = new javax.swing.JTextField();
         jPanel53 = new javax.swing.JPanel();
         textoDiasEntrega = new javax.swing.JLabel();
         jPanel54 = new javax.swing.JPanel();
         jPanel55 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
-        checkDocsenRegla = new javax.swing.JCheckBox();
+        checkActivo = new javax.swing.JCheckBox();
         jPanel57 = new javax.swing.JPanel();
         textoActivo = new javax.swing.JLabel();
 
@@ -123,8 +123,8 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        textoPrincipal.setText("Datos Empresa");
-        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 0, -1, 40));
+        textoPrincipal.setText("Datos Persona Natural");
+        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, 40));
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
 
@@ -380,9 +380,9 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         jPanel47.setBackground(new java.awt.Color(255, 255, 51));
         jPanel47.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fieldNit.setEnabled(false);
-        fieldNit.setPreferredSize(new java.awt.Dimension(150, 20));
-        jPanel48.add(fieldNit);
+        fieldCedula.setEnabled(false);
+        fieldCedula.setPreferredSize(new java.awt.Dimension(150, 20));
+        jPanel48.add(fieldCedula);
 
         jPanel47.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
@@ -411,9 +411,9 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         jPanel51.setBackground(new java.awt.Color(255, 255, 51));
         jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fieldRepLegal.setEnabled(false);
-        fieldRepLegal.setPreferredSize(new java.awt.Dimension(150, 20));
-        jPanel52.add(fieldRepLegal);
+        fieldDiaEntregas.setEnabled(false);
+        fieldDiaEntregas.setPreferredSize(new java.awt.Dimension(150, 20));
+        jPanel52.add(fieldDiaEntregas);
 
         jPanel51.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
@@ -442,13 +442,13 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         jPanel55.setBackground(new java.awt.Color(255, 255, 51));
         jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        checkDocsenRegla.setEnabled(false);
-        checkDocsenRegla.addActionListener(new java.awt.event.ActionListener() {
+        checkActivo.setEnabled(false);
+        checkActivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                checkDocsenReglaActionPerformed(evt);
+                checkActivoActionPerformed(evt);
             }
         });
-        jPanel56.add(checkDocsenRegla);
+        jPanel56.add(checkActivo);
 
         jPanel55.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
@@ -571,22 +571,15 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
         // TODO add your handling code here:
-        PantallaAgenda p4 = new PantallaAgenda();
-        p4.setSize(350, 600);
-        p4.setLocation(0, 0);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(p4, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();
+        volverPantallaAnterior();
     }//GEN-LAST:event_botonAtrasActionPerformed
 
-    private void checkDocsenReglaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDocsenReglaActionPerformed
+    private void checkActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_checkDocsenReglaActionPerformed
+    }//GEN-LAST:event_checkActivoActionPerformed
 
     //Mio
-    public void verDatos() {
+    private void verDatos() {
 
         fieldNombre.setText(Listas.getListaProveedores().get(index).getNombre());
         fieldCelular.setText(Listas.getListaProveedores().get(index).getCelular());
@@ -599,27 +592,37 @@ public class VerAgendaPersonaNatural extends javax.swing.JPanel {
         if (Listas.getListaProveedores().get(index) instanceof ProveedorPersonaNatural) {
             ProveedorPersonaNatural tmp = (ProveedorPersonaNatural) Listas.getListaProveedores().get(index);
 
-            fieldNit.setText(Integer.toString(tmp.getCedula()));
-            fieldRepLegal.setText(tmp.getDiaDeEntregaMercancias());
-            checkDocsenRegla.setSelected(tmp.isActivo());
+            fieldCedula.setText(Integer.toString(tmp.getCedula()));
+            fieldDiaEntregas.setText(tmp.getDiaDeEntregaMercancias());
+            checkActivo.setSelected(tmp.isActivo());
 
         }
 
     }
 
+    private final void volverPantallaAnterior() {
+        PantallaAgenda p4 = new PantallaAgenda();
+        p4.setSize(350, 600);
+        p4.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p4, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAtras;
-    private javax.swing.JCheckBox checkDocsenRegla;
+    private javax.swing.JCheckBox checkActivo;
+    private javax.swing.JTextField fieldCedula;
     private javax.swing.JTextField fieldCelular;
     private javax.swing.JTextField fieldCiudad;
     private javax.swing.JTextField fieldCorreo;
+    private javax.swing.JTextField fieldDiaEntregas;
     private javax.swing.JTextField fieldDireccion;
-    private javax.swing.JTextField fieldNit;
     private javax.swing.JTextField fieldNombre;
     private javax.swing.JTextField fieldPais;
     private javax.swing.JTextField fieldProducto;
-    private javax.swing.JTextField fieldRepLegal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
