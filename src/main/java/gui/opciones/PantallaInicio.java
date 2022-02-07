@@ -9,6 +9,7 @@ import gui.opciones.*;
 import gui.registroylogin.*;
 import gui.principal.pantallas.*;
 import java.awt.*;
+import logica.Listas;
 /**
  *
  * @author Arturo
@@ -20,6 +21,7 @@ public class PantallaInicio extends javax.swing.JPanel {
      */
     public PantallaInicio() {
         initComponents();
+        textoSaludoCliente.setText("Hola, "+Listas.getUsuarioActual());
     }
 
     /**

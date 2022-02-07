@@ -261,10 +261,14 @@ public class PantallaLogin extends javax.swing.JPanel {
         if (verificarEspacios() == false) {
 
             textoError.setText("Debe diligenciar los campos");
-            
+
         } else {
             if (verificarIdentidad() == true) {
+
+                Listas.setUsuarioActual(fieldUsuario.getText());
+                seleccionarIndex();
                 irPantallaInicio();
+
             } else {
                 textoError.setText("Usuario y/o Contrasena Incorrectos");
             }
@@ -335,6 +339,8 @@ public class PantallaLogin extends javax.swing.JPanel {
 
     private void iniciarBaseClientes() {
         Listas.getBaseClientes().put("a", "a");
+        Listas.getBaseClientes().put("daniel35", "XcY1256");
+        Listas.getBaseClientes().put("sofia846", "CiLsU35");
     }
 
     private void traerBaseClientes() {
@@ -354,6 +360,22 @@ public class PantallaLogin extends javax.swing.JPanel {
         }
 
         return espaciosLlenos;
+    }
+
+    private void seleccionarIndex() {
+
+        setListaClientesClase(Listas.getListaClientes());
+        for (int i = 0; i < listaClientesClase.size(); i++) {
+
+            if (listaClientesClase.get(i).getUsuario().equals(fieldUsuario.getText())) {
+
+                Listas.setIndexActualListaClientes(i);
+                break;
+
+            }
+
+        }
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

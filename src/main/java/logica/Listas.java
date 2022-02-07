@@ -84,6 +84,8 @@ public class Listas {
 
     private static String usuarioActual;
     
+    private static int indexActualListaClientes;
+    
     private static Map<String, String> baseClientes = new HashMap<>();
 
     //Get & Set
@@ -107,8 +109,13 @@ public class Listas {
         ArrayList<Cliente> listaClientesLoc = new ArrayList<>();
 
         Cliente cliente01 = new Cliente("a", "a", "Admin", "celAdmin", "CorreoAdmin");
+        Cliente cliente02 = new Cliente("daniel35", "XcY1256", "Daniel Perez", "316856940", "danielper@gmoil.com");
+        Cliente cliente03 = new Cliente("sofia846", "CiLsU35", "Sofia Carmona", "318545369", "soficar@joutluk.com");
+        
 
         listaClientesLoc.add(cliente01);
+        listaClientesLoc.add(cliente02);
+        listaClientesLoc.add(cliente03);
         return listaClientesLoc;
     }
 
@@ -127,6 +134,15 @@ public class Listas {
     public static void setUsuarioActual(String aUsuarioActual) {
         usuarioActual = aUsuarioActual;
     }
+    
+    public static int getIndexActualListaClientes() {
+        return indexActualListaClientes;
+    }
+
+    public static void setIndexActualListaClientes(int aIndexActualLista) {
+        indexActualListaClientes = aIndexActualLista;
+    }
+    
     
 
     //---------------------------------------------Fin Loogin---------------------------------------------
