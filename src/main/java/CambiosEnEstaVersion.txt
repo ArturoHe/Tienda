@@ -1,3 +1,3 @@
-Ver 1.5.1
+Ver 1.6
 
--Opcion Ver Mi Info Implementada
+-Creadas todas las clases para productos
