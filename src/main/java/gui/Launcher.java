@@ -1,8 +1,12 @@
 package gui;
 
+import Clases.producto.Producto;
+import Clases.producto.tipos.*;
+import gui.principal.pantallas.*;
 import java.awt.BorderLayout;
 import gui.registroylogin.*;
-
+import java.util.ArrayList;
+import logica.Listas;
 
 public class Launcher extends javax.swing.JFrame {
 
@@ -11,6 +15,8 @@ public class Launcher extends javax.swing.JFrame {
      */
     public Launcher() {
         initComponents();
+        Listas.setListaProductos(Listas.crearListaInicialProductos());
+        iniciarListasProductos();
     }
 
     /**
@@ -91,9 +97,9 @@ public class Launcher extends javax.swing.JFrame {
         PantallaLogin p1 = new PantallaLogin();
         p1.setSize(350, 600);
         p1.setLocation(0, 0);
-        
+
         panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
+        panelPrincipal.add(p1, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonEntrarActionPerformed
@@ -132,13 +138,65 @@ public class Launcher extends javax.swing.JFrame {
                 new Launcher().setVisible(true);
             }
         });
-        
+
         System.out.println("hola");
-        
-        
-        
-        
-        
+
+    }
+
+    //Mio
+    private void iniciarListasProductos() {
+
+        ArrayList<Producto> listaLocal = new ArrayList<>();
+        listaLocal = Listas.getListaProductos();
+
+        ArrayList<Fruta> listaFrutasLocal = new ArrayList<>();
+        ArrayList<Verdura> listaVerdurasLocal = new ArrayList<>();
+        ArrayList<Cereal> listaCerealesLocal = new ArrayList<>();
+        ArrayList<Carne> listaCarnesLocal = new ArrayList<>();
+        ArrayList<Aseo> listaAseoLocal = new ArrayList<>();
+        ArrayList<Otro> listaOtrosLocal = new ArrayList<>();
+
+        for (int i = 0; i < listaLocal.size(); i++) {
+
+            if (listaLocal.get(i) instanceof Fruta) {
+                Fruta tmp = (Fruta) listaLocal.get(i);
+                
+                listaFrutasLocal.add(tmp);
+
+            }else if(listaLocal.get(i) instanceof Verdura){
+                Verdura tmp = (Verdura) listaLocal.get(i);
+                
+                listaVerdurasLocal.add(tmp);
+                
+            }else if(listaLocal.get(i) instanceof Cereal){
+                Cereal tmp = (Cereal) listaLocal.get(i);
+                
+                listaCerealesLocal.add(tmp);
+                
+            }else if(listaLocal.get(i) instanceof Carne){
+                Carne tmp = (Carne) listaLocal.get(i);
+                
+                listaCarnesLocal.add(tmp);
+                
+            }else if(listaLocal.get(i) instanceof Aseo){
+                Aseo tmp = (Aseo) listaLocal.get(i);
+                
+                listaAseoLocal.add(tmp);
+                
+            }else if(listaLocal.get(i) instanceof Otro){
+                Otro tmp = (Otro) listaLocal.get(i);
+                
+                listaOtrosLocal.add(tmp);
+                
+            }
+
+        }
+        PanelFrutas.setListaFrutas(listaFrutasLocal);
+        PanelVerduras.setListaVerduras(listaVerdurasLocal);
+        PanelCereales.setListaCereales(listaCerealesLocal);
+        PanelCarnes.setListaCarnes(listaCarnesLocal);
+        PanelAseo.setListaAseo(listaAseoLocal);
+        PanelOtros.setListaOtros(listaOtrosLocal);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

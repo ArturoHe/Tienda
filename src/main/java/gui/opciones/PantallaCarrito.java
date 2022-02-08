@@ -5,6 +5,13 @@
  */
 package gui.opciones;
 
+import Clases.producto.Producto;
+import Clases.producto.tipos.Fruta;
+import java.awt.BorderLayout;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import logica.Listas;
+
 /**
  *
  * @author Arturo
@@ -16,6 +23,9 @@ public class PantallaCarrito extends javax.swing.JPanel {
      */
     public PantallaCarrito() {
         initComponents();
+        limpiarLista();
+        iniciarLista(Listas.getListaCarrito());
+        traerLista();
     }
 
     /**
@@ -27,31 +37,200 @@ public class PantallaCarrito extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        botonVolverAtras = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listaPrincipal = new javax.swing.JList<>();
+        jPanel3 = new javax.swing.JPanel();
+        textoTotal = new javax.swing.JLabel();
+        textoValorTotal = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        botonEliminar = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(350, 519));
         setMinimumSize(new java.awt.Dimension(350, 519));
         setPreferredSize(new java.awt.Dimension(350, 519));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel2.setBackground(new java.awt.Color(204, 0, 0));
+        panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 519));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setText("Carrito");
+        jPanel2.add(jLabel1, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+
+        botonVolverAtras.setText("<");
+        botonVolverAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverAtrasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(botonVolverAtras);
+
+        jPanel2.add(jPanel1, java.awt.BorderLayout.LINE_START);
+
+        jPanel4.setBackground(new java.awt.Color(0, 255, 0));
+
+        listaPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        listaPrincipal.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Banano", "Papaya", "Durazno", "Melon" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        listaPrincipal.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane1.setViewportView(listaPrincipal);
+
+        textoTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoTotal.setText("Total:");
+        jPanel3.add(textoTotal);
+
+        textoValorTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jPanel3.add(textoValorTotal);
+
+        botonEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        botonEliminar.setText("Eliminar del Carrito");
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+        jPanel5.add(botonEliminar);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
 
-        add(jPanel2, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
+        panelPrincipal.setLayout(panelPrincipalLayout);
+        panelPrincipalLayout.setHorizontalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        panelPrincipalLayout.setVerticalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        add(panelPrincipal, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonVolverAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverAtrasActionPerformed
+        // TODO add your handling code here:
+        PantallaInicio p1 = new PantallaInicio();
+        p1.setSize(350, 519);
+        p1.setLocation(0, 0);
+
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p1, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
+    }//GEN-LAST:event_botonVolverAtrasActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        // TODO add your handling code here:
+        eliminarDato();
+    }//GEN-LAST:event_botonEliminarActionPerformed
+
+    //Mio
+    private DefaultListModel limpiarLista() {
+
+        DefaultListModel modelo = new DefaultListModel();
+        listaPrincipal.setModel(modelo);
+        return modelo;
+    }
+
+    private void traerLista() {
+        ArrayList<Producto> listaLocal = new ArrayList<>();
+        listaLocal = Listas.getListaCarrito();
+        int valorTotal = 0;
+
+        for (int i = 0; i < listaLocal.size(); i++) {
+            valorTotal = valorTotal + listaLocal.get(i).getPrecio();
+
+        }
+
+        textoValorTotal.setText(String.valueOf(valorTotal));
+    }
+
+    private DefaultListModel iniciarLista(ArrayList listaExterna) {
+        DefaultListModel modelo = (DefaultListModel) listaPrincipal.getModel();
+
+        ArrayList<Producto> listaLocal = new ArrayList<>();
+        listaLocal = listaExterna;
+
+        for (int i = 0; i < listaLocal.size(); i++) {
+
+            modelo.addElement(listaLocal.get(i).getNombre());;
+
+        }
+        return modelo;
+    }
+
+    private DefaultListModel eliminarDato() {
+        ArrayList<Producto> listaLocal = new ArrayList<>();
+        listaLocal = Listas.getListaCarrito();
+        int valor = Integer.parseInt(textoValorTotal.getText());
+
+        valor = valor - listaLocal.get(listaPrincipal.getSelectedIndex()).getPrecio();
+
+        textoValorTotal.setText(String.valueOf(valor));
+        
+        listaLocal.remove(listaPrincipal.getSelectedIndex());
+
+        DefaultListModel modelo = (DefaultListModel) listaPrincipal.getModel();
+        modelo.remove(listaPrincipal.getSelectedIndex());
+
+        Listas.setListaCarrito(listaLocal);
+
+        return modelo;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonVolverAtras;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JList<String> listaPrincipal;
+    private javax.swing.JPanel panelPrincipal;
+    private javax.swing.JLabel textoTotal;
+    private javax.swing.JLabel textoValorTotal;
     // End of variables declaration//GEN-END:variables
 }

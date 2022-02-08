@@ -5,11 +5,14 @@
  */
 package gui.opciones;
 
+import Clases.producto.Producto;
 import gui.opciones.*;
 import gui.registroylogin.*;
 import gui.principal.pantallas.*;
 import java.awt.*;
+import java.util.ArrayList;
 import logica.Listas;
+
 /**
  *
  * @author Arturo
@@ -21,7 +24,7 @@ public class PantallaInicio extends javax.swing.JPanel {
      */
     public PantallaInicio() {
         initComponents();
-        textoSaludoCliente.setText("Hola, "+Listas.getUsuarioActual());
+        textoSaludoCliente.setText("Hola, " + Listas.getUsuarioActual());
     }
 
     /**
@@ -253,7 +256,7 @@ public class PantallaInicio extends javax.swing.JPanel {
         p1.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p1,BorderLayout.CENTER);
+        panelPrincipal.add(p1, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonInicioActionPerformed
@@ -265,7 +268,7 @@ public class PantallaInicio extends javax.swing.JPanel {
         p2.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p2,BorderLayout.CENTER);
+        panelPrincipal.add(p2, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonCarritoActionPerformed
@@ -277,21 +280,24 @@ public class PantallaInicio extends javax.swing.JPanel {
         p3.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p3,BorderLayout.CENTER);
+        panelPrincipal.add(p3, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonMiInformacionActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
         // TODO add your handling code here:
+        limpiarCarrito();
+        
         PantallaLogin p4 = new PantallaLogin();
         p4.setSize(350, 600);
         p4.setLocation(0, 0);
 
         panelPrincipalHUD.removeAll();
-        panelPrincipalHUD.add(p4,BorderLayout.CENTER);
+        panelPrincipalHUD.add(p4, BorderLayout.CENTER);
         panelPrincipalHUD.revalidate();
         panelPrincipalHUD.repaint();
+        
     }//GEN-LAST:event_botonSalirActionPerformed
 
     private void botonFrutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFrutasActionPerformed
@@ -301,7 +307,7 @@ public class PantallaInicio extends javax.swing.JPanel {
         p5.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p5,BorderLayout.CENTER);
+        panelPrincipal.add(p5, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonFrutasActionPerformed
@@ -313,7 +319,7 @@ public class PantallaInicio extends javax.swing.JPanel {
         p6.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p6,BorderLayout.CENTER);
+        panelPrincipal.add(p6, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonCerealesActionPerformed
@@ -325,47 +331,51 @@ public class PantallaInicio extends javax.swing.JPanel {
         p7.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p7,BorderLayout.CENTER);
+        panelPrincipal.add(p7, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonCarnesActionPerformed
 
     private void botonOtrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOtrosActionPerformed
         // TODO add your handling code here:
-        PanelOtros p9 = new PanelOtros();
-        p9.setSize(350, 519);
-        p9.setLocation(0, 0);
+        PanelOtros p8 = new PanelOtros();
+        p8.setSize(350, 519);
+        p8.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p9,BorderLayout.CENTER);
+        panelPrincipal.add(p8, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonOtrosActionPerformed
 
     private void botonAseoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAseoActionPerformed
         // TODO add your handling code here:
-        PanelAseo p8 = new PanelAseo();
-        p8.setSize(350, 600);
-        p8.setLocation(0, 0);
+        PanelAseo p9 = new PanelAseo();
+        p9.setSize(350, 519);
+        p9.setLocation(0, 0);
 
-        panelPrincipalHUD.removeAll();
-        panelPrincipalHUD.add(p8,BorderLayout.CENTER);
-        panelPrincipalHUD.revalidate();
-        panelPrincipalHUD.repaint();
+        panelPrincipal.removeAll();
+        panelPrincipal.add(p9, BorderLayout.CENTER);
+        panelPrincipal.revalidate();
+        panelPrincipal.repaint();
     }//GEN-LAST:event_botonAseoActionPerformed
 
     private void botonVerdurasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerdurasActionPerformed
         // TODO add your handling code here:
-        PanelVerduras p6 = new PanelVerduras();
-        p6.setSize(350, 519);
-        p6.setLocation(0, 0);
+        PanelVerduras p10 = new PanelVerduras();
+        p10.setSize(350, 519);
+        p10.setLocation(0, 0);
 
         panelPrincipal.removeAll();
-        panelPrincipal.add(p6,BorderLayout.CENTER);
+        panelPrincipal.add(p10, BorderLayout.CENTER);
         panelPrincipal.revalidate();
         panelPrincipal.repaint();
     }//GEN-LAST:event_botonVerdurasActionPerformed
 
+    private void limpiarCarrito() {
+        ArrayList<Producto> Cero = new ArrayList<>();
+        Listas.setListaCarrito(Cero);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAseo;

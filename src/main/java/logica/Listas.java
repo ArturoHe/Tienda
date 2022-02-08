@@ -2,6 +2,8 @@ package logica;
 
 import Clases.persona.cliente.Cliente;
 import Clases.persona.proveedor.*;
+import Clases.producto.Producto;
+import Clases.producto.tipos.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -77,7 +79,7 @@ public class Listas {
 
     //---------------------------------------------Fin Agenda---------------------------------------------
     //-----------------------------------------------Loogin-----------------------------------------------
-    //Atributo
+    //Atributos
     private static ArrayList<Cliente> listaClientes = new ArrayList<>();
 
     private static int comienzoLogin = 0;
@@ -146,4 +148,87 @@ public class Listas {
     
 
     //---------------------------------------------Fin Loogin---------------------------------------------
+    //--------------------------------------------- Productos---------------------------------------------
+    //Atributos
+    private static ArrayList<Producto> listaProductos = new ArrayList<>();
+    
+    //Get & Set
+    public static ArrayList<Producto> getListaProductos() {
+        return listaProductos;
+    }
+
+    public static void setListaProductos(ArrayList<Producto> aListaProductos) {
+        listaProductos = aListaProductos;
+    }
+    
+    public static ArrayList crearListaInicialProductos(){
+        
+        ArrayList<Producto> listaProductosLocal = new ArrayList<>();
+        
+        Fruta fruta1 = new Fruta(true, 500, "Malus Domestica", false, "Manzana", "Manzana roja nacional", 0, "Fruta", 1000);
+        Fruta fruta2 = new Fruta(true, 1000, "Musa Paradisiaca", false, "Banano", "Banano Cavendish Nacional", 1, "Fruta", 3000);
+        Fruta fruta3 = new Fruta(true, 500, "Prunus domestica", true, "Chile", "Ciruela", "Ciruela roja importada", 2, "fruta", 4500);
+        
+        Verdura verdura1 = new Verdura(true, 500, "Beta vulgaris", false, "Acelga", "Acelga nacinal", 3, "Verdura", 1800);
+        Verdura verdura2 = new Verdura(true, 2500, "Solanum phureja", false, "Papa Criolla", "Papa Criolla", 4, "Verdura", 4000);
+        Verdura verdura3 = new Verdura(true, 3000, "Dioscorea alata", true, "Nigeria", "Name", "Name importado", 5, "Verdura", 4000);
+        
+        Cereal cereal1 = new Cereal(false, 1000, "Triticum", false, "Harina de trigo", "Trigo Nacional", 6, "Cereal", 2000);
+        Cereal cereal2 = new Cereal(false, 1000, "Oryza sativa", false, "Arroz", "Arroz llanero Nacional", 7, "Cereal", 3100);
+        Cereal cereal3 = new Cereal(false, 1000, "Zea mays", false, "Maiz", "Maiz nacional", 50003, "Cereal", 8);
+        
+        Carne carne1 = new Carne(false, 1000, "Cerdo", false, "Carne de Cerdo", "Carne de Cerdo nacional", 9, "Carne", 7000);
+        Carne carne2 = new Carne(false, 1000, "Res", false, "Carne de Res", "Carne de Res nacional", 10, "Carne", 15000);
+        Carne carne3 = new Carne(false, 1000, "Pollo", true,"Ecueador", "Pollo", "Pollo importado", 11, "Carne", 8000);
+        
+        Aseo aseo1 = new Aseo(false, 4000, "Ariol", false, "Jabon en polvo", "Jabon Ariol en Polvo", 12, "Aseo", 32000);
+        Aseo aseo2 = new Aseo(true, 500, "Panteno", true,"USA", "Shampoo", "Shampoo Panteno", 13, "Aseo", 18100);
+        Aseo aseo3 = new Aseo(true, 90, "Dova", true,"USA", "Jabon", "Jabon Dova", 14, "Aseo", 10710);
+        
+        Otro otro1 = new Otro(true, false, 189, false, "Cerveza La Roja", "Cerveza de la paz", 15, "Otro", 3400);
+        Otro otro2 = new Otro(false, true, 50, false, "Bolso", "Bolso Rojo Manifiesta", 16, "Otro", 140000);
+        Otro otro3 = new Otro(true, false, 356, false, "Cafe Paramillo", "Cafe de la paz", 17, "Otro", 8000);
+        
+        listaProductosLocal.add(fruta1);
+        listaProductosLocal.add(fruta2);
+        listaProductosLocal.add(fruta3);
+        
+        listaProductosLocal.add(verdura1);
+        listaProductosLocal.add(verdura2);
+        listaProductosLocal.add(verdura3);
+        
+        listaProductosLocal.add(cereal1);
+        listaProductosLocal.add(cereal2);
+        listaProductosLocal.add(cereal3);
+        
+        listaProductosLocal.add(carne1);
+        listaProductosLocal.add(carne2);
+        listaProductosLocal.add(carne3);
+        
+        listaProductosLocal.add(aseo1);
+        listaProductosLocal.add(aseo2);
+        listaProductosLocal.add(aseo3);
+        
+        listaProductosLocal.add(otro1);
+        listaProductosLocal.add(otro2);
+        listaProductosLocal.add(otro3);
+        
+        
+        return listaProductosLocal;
+   }
+    //-------------------------------------------Fin Productos--------------------------------------------
+    //----------------------------------------------Carrito-----------------------------------------------
+    //Atributos
+    private static ArrayList<Producto> listaCarrito = new ArrayList<>();
+    
+    //Get & Set
+    public static ArrayList<Producto> getListaCarrito() {
+        return listaCarrito;
+    }
+
+    public static void setListaCarrito(ArrayList<Producto> aListaCarrito) {
+        listaCarrito = aListaCarrito;
+    }
+    
+    
 }
