@@ -85,7 +85,7 @@ public class PantallaLogin extends javax.swing.JPanel {
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(225, 244, 203));
         jPanel7.setMinimumSize(new java.awt.Dimension(350, 600));
         jPanel7.setPreferredSize(new java.awt.Dimension(350, 500));
 
@@ -162,8 +162,8 @@ public class PantallaLogin extends javax.swing.JPanel {
         });
         jPanel4.add(botonEntrar);
 
+        jPanel5.setBackground(new java.awt.Color(241, 191, 152));
         jPanel5.setAutoscrolls(true);
-        jPanel5.setOpaque(false);
         jPanel5.setPreferredSize(new java.awt.Dimension(350, 40));
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -174,7 +174,7 @@ public class PantallaLogin extends javax.swing.JPanel {
         jPanel6.setOpaque(false);
 
         textoProovedores.setForeground(new java.awt.Color(0, 0, 255));
-        textoProovedores.setText("¿Es Proovedor?, click  aqui.");
+        textoProovedores.setText("¿Es Proovedor?, click  aqui para ver la Agenda");
         textoProovedores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         textoProovedores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -182,6 +182,8 @@ public class PantallaLogin extends javax.swing.JPanel {
             }
         });
         jPanel6.add(textoProovedores);
+
+        jPanel1.setOpaque(false);
 
         textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel1.add(textoError);

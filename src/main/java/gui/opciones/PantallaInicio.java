@@ -64,8 +64,10 @@ public class PantallaInicio extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(350, 519));
         setLayout(new java.awt.BorderLayout());
 
-        panelPrincipalHUD.setBackground(new java.awt.Color(254, 255, 234));
+        panelPrincipalHUD.setBackground(new java.awt.Color(225, 244, 203));
         panelPrincipalHUD.setPreferredSize(new java.awt.Dimension(350, 600));
+
+        jPanel5.setBackground(new java.awt.Color(241, 191, 152));
 
         botonInicio.setText("Inicio");
         botonInicio.setPreferredSize(new java.awt.Dimension(65, 65));
@@ -119,13 +121,23 @@ public class PantallaInicio extends javax.swing.JPanel {
         panelPrincipal.setPreferredSize(new java.awt.Dimension(350, 519));
         panelPrincipal.setLayout(new java.awt.BorderLayout());
 
-        jPanel6.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel6.setBackground(new java.awt.Color(225, 244, 203));
 
+        jPanel1.setBackground(new java.awt.Color(241, 191, 152));
+
+        textoSaludoCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        textoSaludoCliente.setForeground(new java.awt.Color(0, 0, 0));
         textoSaludoCliente.setText("Hola,(Nombre)");
         jPanel1.add(textoSaludoCliente);
 
+        jPanel7.setBackground(new java.awt.Color(241, 191, 152));
+
+        textoQueDeseas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        textoQueDeseas.setForeground(new java.awt.Color(0, 0, 0));
         textoQueDeseas.setText("¿Que deseas hoy?");
         jPanel7.add(textoQueDeseas);
+
+        jPanel8.setOpaque(false);
 
         botonFrutas.setText("Frutas");
         botonFrutas.addActionListener(new java.awt.event.ActionListener() {
@@ -226,7 +238,7 @@ public class PantallaInicio extends javax.swing.JPanel {
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(64, 64, 64)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         panelPrincipal.add(jPanel6, java.awt.BorderLayout.CENTER);

@@ -42,13 +42,21 @@ public class Launcher extends javax.swing.JFrame {
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
 
-        jPanel7.setBackground(new java.awt.Color(0, 204, 102));
+        jPanel7.setBackground(new java.awt.Color(225, 244, 203));
         jPanel7.setMinimumSize(new java.awt.Dimension(350, 600));
         jPanel7.setPreferredSize(new java.awt.Dimension(350, 500));
 
-        textoPrincipal.setText("Coop");
+        jPanel1.setBackground(new java.awt.Color(241, 191, 152));
+
+        textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
+        textoPrincipal.setText("Cooperativa Ecomún");
         jPanel1.add(textoPrincipal);
 
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
+
+        botonEntrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        botonEntrar.setForeground(new java.awt.Color(0, 0, 0));
         botonEntrar.setText("Entrar");
         botonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +79,7 @@ public class Launcher extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(95, 95, 95)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(337, Short.MAX_VALUE))
+                .addContainerGap(289, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);

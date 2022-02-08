@@ -76,14 +76,16 @@ public class PantallaAgenda extends javax.swing.JPanel {
 
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         textoPrincipal.setText("Agenda");
         jPanel2.add(textoPrincipal, java.awt.BorderLayout.CENTER);
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel3.setOpaque(false);
 
         botonAtras.setText("<");
         botonAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +97,10 @@ public class PantallaAgenda extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel5.setBackground(new java.awt.Color(241, 191, 152));
+        jPanel5.setForeground(new java.awt.Color(241, 191, 152));
 
         botonVer.setText("Ver");
         botonVer.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +134,8 @@ public class PantallaAgenda extends javax.swing.JPanel {
         });
         jPanel5.add(botonEliminar);
 
+        listaContactos.setBackground(new java.awt.Color(186, 203, 169));
+        listaContactos.setForeground(new java.awt.Color(0, 0, 0));
         listaContactos.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }

@@ -101,6 +101,9 @@
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="24" style="0"/>
                     </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="0" red="0" type="rgb"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Datos Empresa"/>
                   </Properties>
                   <Constraints>
@@ -114,6 +117,7 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="99" red="ff" type="rgb"/>
                     </Property>
+                    <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -138,7 +142,7 @@
             <Container class="javax.swing.JPanel" name="jPanel16">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                  <Color blue="cb" green="f4" red="e1" type="rgb"/>
                 </Property>
               </Properties>
 
@@ -173,7 +177,7 @@
                     <Container class="javax.swing.JPanel" name="jPanel5">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                          <Color blue="99" green="99" red="ff" type="rgb"/>
+                          <Color blue="a9" green="cb" red="ba" type="rgb"/>
                         </Property>
                       </Properties>
 
@@ -227,6 +231,9 @@
                       </Layout>
                       <SubComponents>
                         <Container class="javax.swing.JPanel" name="jPanel17">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -254,6 +261,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -261,6 +269,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel19">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -271,6 +282,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldNombre">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -280,6 +294,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel20">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -290,6 +307,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoNombreEncargado">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Nombre Empresa"/>
                                       </Properties>
                                     </Component>
@@ -300,6 +320,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel21">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -327,6 +350,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -334,6 +358,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel23">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -344,6 +371,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldCelular">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -353,6 +383,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel24">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -363,6 +396,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoCelular">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Celular"/>
                                       </Properties>
                                     </Component>
@@ -373,6 +409,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel25">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -400,6 +439,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -407,6 +447,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel27">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -417,6 +460,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldCorreo">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -426,6 +472,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel28">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -436,6 +485,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoCorreo">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Correo"/>
                                       </Properties>
                                     </Component>
@@ -446,6 +498,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel30">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -473,6 +528,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -480,6 +536,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel32">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -490,6 +549,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldProducto">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -499,6 +561,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel33">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -509,6 +574,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoProducto">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Producto"/>
                                       </Properties>
                                     </Component>
@@ -519,6 +587,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel34">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -546,6 +617,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -553,6 +625,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel36">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -563,6 +638,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldPais">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -572,6 +650,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel37">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -582,6 +663,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoPais">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Pais"/>
                                       </Properties>
                                     </Component>
@@ -592,6 +676,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel38">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -619,6 +706,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -626,6 +714,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel40">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -636,6 +727,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldCiudad">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -645,6 +739,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel41">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -655,6 +752,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoCiudad">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Ciudad"/>
                                       </Properties>
                                     </Component>
@@ -665,6 +765,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel42">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -692,6 +795,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -699,6 +803,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel44">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -709,6 +816,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldDireccion">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -718,6 +828,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel45">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -728,6 +841,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoDireccion">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Direccion"/>
                                       </Properties>
                                     </Component>
@@ -738,6 +854,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel46">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -765,6 +884,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -772,6 +892,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel48">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -782,6 +905,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldNit">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -791,6 +917,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel49">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -801,6 +930,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoNit">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="NIT"/>
                                       </Properties>
                                     </Component>
@@ -811,6 +943,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel50">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -838,6 +973,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -845,6 +981,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel52">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -855,6 +994,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JTextField" name="fieldRepLegal">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                                           <Dimension value="[150, 20]"/>
@@ -864,6 +1006,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel53">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -874,6 +1019,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoRepLegal">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Rep. Legal"/>
                                       </Properties>
                                     </Component>
@@ -884,6 +1032,9 @@
                           </SubComponents>
                         </Container>
                         <Container class="javax.swing.JPanel" name="jPanel54">
+                          <Properties>
+                            <Property name="opaque" type="boolean" value="false"/>
+                          </Properties>
 
                           <Layout>
                             <DimensionLayout dim="0">
@@ -911,6 +1062,7 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="33" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="opaque" type="boolean" value="false"/>
                               </Properties>
 
                               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -918,6 +1070,9 @@
                               </Layout>
                               <SubComponents>
                                 <Container class="javax.swing.JPanel" name="jPanel56">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="140" y="0" width="-1" height="-1"/>
@@ -928,6 +1083,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JCheckBox" name="checkDocsenRegla">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="enabled" type="boolean" value="false"/>
                                       </Properties>
                                       <Events>
@@ -937,6 +1095,9 @@
                                   </SubComponents>
                                 </Container>
                                 <Container class="javax.swing.JPanel" name="jPanel57">
+                                  <Properties>
+                                    <Property name="opaque" type="boolean" value="false"/>
+                                  </Properties>
                                   <Constraints>
                                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                                       <AbsoluteConstraints x="30" y="0" width="-1" height="28"/>
@@ -947,6 +1108,9 @@
                                   <SubComponents>
                                     <Component class="javax.swing.JLabel" name="textoDocsenRegla">
                                       <Properties>
+                                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                          <Color blue="0" green="0" red="0" type="rgb"/>
+                                        </Property>
                                         <Property name="text" type="java.lang.String" value="Docs. en Regla"/>
                                       </Properties>
                                     </Component>

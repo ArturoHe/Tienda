@@ -124,14 +124,18 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
         panelPrincipal.setMaximumSize(new java.awt.Dimension(350, 600));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 600));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         textoPrincipal.setText("Editar Persona Natural");
         jPanel2.add(textoPrincipal, java.awt.BorderLayout.CENTER);
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel3.setOpaque(false);
 
         botonAtras.setText("<");
         botonAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -143,10 +147,12 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
-        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel16.setBackground(new java.awt.Color(225, 244, 203));
 
         textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel4.add(textoError);
+
+        jPanel6.setBackground(new java.awt.Color(241, 191, 152));
 
         botonCancelar.setText("Cancelar");
         botonCancelar.setPreferredSize(new java.awt.Dimension(130, 25));
@@ -168,16 +174,25 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
 
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        jPanel5.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel5.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel17.setOpaque(false);
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel18.setOpaque(false);
         jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel19.setOpaque(false);
+
+        fieldNombre.setForeground(new java.awt.Color(0, 0, 0));
         fieldNombre.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel19.add(fieldNombre);
 
         jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel20.setOpaque(false);
+
+        textoNombreEncargado.setForeground(new java.awt.Color(0, 0, 0));
         textoNombreEncargado.setText("Nombre Encargado");
         jPanel20.add(textoNombreEncargado);
 
@@ -200,14 +215,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel21.setOpaque(false);
+
         jPanel22.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel22.setOpaque(false);
         jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel23.setOpaque(false);
+
+        fieldCelular.setForeground(new java.awt.Color(0, 0, 0));
         fieldCelular.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel23.add(fieldCelular);
 
         jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel24.setOpaque(false);
+
+        textoCelular.setForeground(new java.awt.Color(0, 0, 0));
         textoCelular.setText("Celular");
         jPanel24.add(textoCelular);
 
@@ -230,14 +254,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel25.setOpaque(false);
+
         jPanel26.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel26.setOpaque(false);
         jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel27.setOpaque(false);
+
+        fieldCorreo.setForeground(new java.awt.Color(0, 0, 0));
         fieldCorreo.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel27.add(fieldCorreo);
 
         jPanel26.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel28.setOpaque(false);
+
+        textoCorreo.setForeground(new java.awt.Color(0, 0, 0));
         textoCorreo.setText("Correo");
         jPanel28.add(textoCorreo);
 
@@ -260,14 +293,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel30.setOpaque(false);
+
         jPanel31.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel31.setOpaque(false);
         jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel32.setOpaque(false);
+
+        fieldProducto.setForeground(new java.awt.Color(0, 0, 0));
         fieldProducto.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel32.add(fieldProducto);
 
         jPanel31.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel33.setOpaque(false);
+
+        textoProducto.setForeground(new java.awt.Color(0, 0, 0));
         textoProducto.setText("Producto");
         jPanel33.add(textoProducto);
 
@@ -290,14 +332,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel34.setOpaque(false);
+
         jPanel35.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel35.setOpaque(false);
         jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel36.setOpaque(false);
+
+        fieldPais.setForeground(new java.awt.Color(0, 0, 0));
         fieldPais.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel36.add(fieldPais);
 
         jPanel35.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel37.setOpaque(false);
+
+        textoPais.setForeground(new java.awt.Color(0, 0, 0));
         textoPais.setText("Pais");
         jPanel37.add(textoPais);
 
@@ -320,14 +371,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel38.setOpaque(false);
+
         jPanel39.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel39.setOpaque(false);
         jPanel39.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel40.setOpaque(false);
+
+        fieldCiudad.setForeground(new java.awt.Color(0, 0, 0));
         fieldCiudad.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel40.add(fieldCiudad);
 
         jPanel39.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel41.setOpaque(false);
+
+        textoCiudad.setForeground(new java.awt.Color(0, 0, 0));
         textoCiudad.setText("Ciudad");
         jPanel41.add(textoCiudad);
 
@@ -350,14 +410,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel42.setOpaque(false);
+
         jPanel43.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel43.setOpaque(false);
         jPanel43.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel44.setOpaque(false);
+
+        fieldDireccion.setForeground(new java.awt.Color(0, 0, 0));
         fieldDireccion.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel44.add(fieldDireccion);
 
         jPanel43.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel45.setOpaque(false);
+
+        textoDireccion.setForeground(new java.awt.Color(0, 0, 0));
         textoDireccion.setText("Direccion");
         jPanel45.add(textoDireccion);
 
@@ -380,14 +449,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel46.setOpaque(false);
+
         jPanel47.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel47.setOpaque(false);
         jPanel47.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel48.setOpaque(false);
+
+        fieldCedula.setForeground(new java.awt.Color(0, 0, 0));
         fieldCedula.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel48.add(fieldCedula);
 
         jPanel47.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel49.setOpaque(false);
+
+        textoCedula.setForeground(new java.awt.Color(0, 0, 0));
         textoCedula.setText("Cedula");
         jPanel49.add(textoCedula);
 
@@ -410,14 +488,23 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel50.setOpaque(false);
+
         jPanel51.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel51.setOpaque(false);
         jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel52.setOpaque(false);
+
+        fieldDiadeEntregas.setForeground(new java.awt.Color(0, 0, 0));
         fieldDiadeEntregas.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel52.add(fieldDiadeEntregas);
 
         jPanel51.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel53.setOpaque(false);
+
+        textoDiasEntrega.setForeground(new java.awt.Color(0, 0, 0));
         textoDiasEntrega.setText("Dia Entregas");
         jPanel53.add(textoDiasEntrega);
 
@@ -440,9 +527,15 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel54.setOpaque(false);
+
         jPanel55.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel55.setOpaque(false);
         jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel56.setOpaque(false);
+
+        checkActivo.setForeground(new java.awt.Color(0, 0, 0));
         checkActivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkActivoActionPerformed(evt);
@@ -452,6 +545,9 @@ public class EditarAgendaPersonaNatural extends javax.swing.JPanel {
 
         jPanel55.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel57.setOpaque(false);
+
+        textoActivo.setForeground(new java.awt.Color(0, 0, 0));
         textoActivo.setText("Activo");
         jPanel57.add(textoActivo);
 

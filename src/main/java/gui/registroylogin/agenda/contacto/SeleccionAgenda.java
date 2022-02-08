@@ -44,14 +44,18 @@ public class SeleccionAgenda extends javax.swing.JPanel {
         panelPrincipal.setBackground(new java.awt.Color(0, 0, 204));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 600));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         textoPrincipal.setText("Selecione el Tipo");
         jPanel2.add(textoPrincipal, java.awt.BorderLayout.CENTER);
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel3.setOpaque(false);
 
         botonAtras.setText("<");
         botonAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +67,7 @@ public class SeleccionAgenda extends javax.swing.JPanel {
 
         jPanel2.add(jPanel3, java.awt.BorderLayout.LINE_START);
 
-        jPanel7.setBackground(new java.awt.Color(153, 153, 0));
+        jPanel7.setBackground(new java.awt.Color(241, 191, 152));
 
         botonEmpresa.setText("Empresa");
         botonEmpresa.setPreferredSize(new java.awt.Dimension(120, 50));

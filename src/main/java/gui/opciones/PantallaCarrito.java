@@ -56,16 +56,19 @@ public class PantallaCarrito extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(350, 519));
         setLayout(new java.awt.BorderLayout());
 
+        panelPrincipal.setBackground(new java.awt.Color(225, 244, 203));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 519));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Carrito");
         jPanel2.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setOpaque(false);
 
         botonVolverAtras.setText("<");
         botonVolverAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -77,9 +80,11 @@ public class PantallaCarrito extends javax.swing.JPanel {
 
         jPanel2.add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel4.setBackground(new java.awt.Color(0, 255, 0));
+        jPanel4.setBackground(new java.awt.Color(225, 244, 203));
 
+        listaPrincipal.setBackground(new java.awt.Color(186, 203, 169));
         listaPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        listaPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         listaPrincipal.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Banano", "Papaya", "Durazno", "Melon" };
             public int getSize() { return strings.length; }
@@ -88,12 +93,17 @@ public class PantallaCarrito extends javax.swing.JPanel {
         listaPrincipal.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(listaPrincipal);
 
+        jPanel3.setBackground(new java.awt.Color(241, 191, 152));
+
         textoTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoTotal.setForeground(new java.awt.Color(0, 0, 0));
         textoTotal.setText("Total:");
         jPanel3.add(textoTotal);
 
         textoValorTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jPanel3.add(textoValorTotal);
+
+        jPanel5.setBackground(new java.awt.Color(241, 191, 152));
 
         botonEliminar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         botonEliminar.setText("Eliminar del Carrito");

@@ -101,17 +101,28 @@ public class PantallaRegistro extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(350, 600));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel16.setBackground(new java.awt.Color(255, 255, 255));
+        panelPrincipal.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel16.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel3.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel3.setOpaque(false);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel4.setOpaque(false);
         jPanel4.setPreferredSize(new java.awt.Dimension(270, 30));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setOpaque(false);
 
         fieldUsuario.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel6.add(fieldUsuario);
 
         jPanel4.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel5.setOpaque(false);
+
+        textoUsuario.setForeground(new java.awt.Color(0, 0, 0));
         textoUsuario.setText("Usuario");
         jPanel5.add(textoUsuario);
 
@@ -134,8 +145,14 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel7.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel7.setOpaque(false);
+
         jPanel8.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel8.setOpaque(false);
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel9.setOpaque(false);
 
         fieldContrasena.setPreferredSize(new java.awt.Dimension(150, 20));
         fieldContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -169,6 +186,9 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, 28));
 
+        jPanel10.setOpaque(false);
+
+        textoContrasena.setForeground(new java.awt.Color(0, 0, 0));
         textoContrasena.setText("Contrasena");
         jPanel10.add(textoContrasena);
 
@@ -191,8 +211,14 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel11.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel11.setOpaque(false);
+
         jPanel12.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel12.setOpaque(false);
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel13.setOpaque(false);
 
         fieldRepetirContrasena.setPreferredSize(new java.awt.Dimension(150, 20));
         fieldRepetirContrasena.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -216,8 +242,10 @@ public class PantallaRegistro extends javax.swing.JPanel {
 
         jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel14.setOpaque(false);
         jPanel14.setLayout(new javax.swing.BoxLayout(jPanel14, javax.swing.BoxLayout.LINE_AXIS));
 
+        textoRepetirContrasena.setForeground(new java.awt.Color(0, 0, 0));
         textoRepetirContrasena.setText("Repetir Contrasena");
         jPanel14.add(textoRepetirContrasena);
 
@@ -240,14 +268,23 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel15.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel15.setOpaque(false);
+
         jPanel17.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel17.setOpaque(false);
         jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel18.setOpaque(false);
 
         fieldNombre.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel18.add(fieldNombre);
 
         jPanel17.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel19.setOpaque(false);
+
+        textoNombre.setForeground(new java.awt.Color(0, 0, 0));
         textoNombre.setText("Nombre");
         jPanel19.add(textoNombre);
 
@@ -270,14 +307,23 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel20.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel20.setOpaque(false);
+
         jPanel21.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel21.setOpaque(false);
         jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel22.setOpaque(false);
 
         fieldCelular.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel22.add(fieldCelular);
 
         jPanel21.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel23.setOpaque(false);
+
+        textoCelular.setForeground(new java.awt.Color(0, 0, 0));
         textoCelular.setText("Celular");
         jPanel23.add(textoCelular);
 
@@ -300,14 +346,23 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel24.setBackground(new java.awt.Color(113, 117, 104));
+        jPanel24.setOpaque(false);
+
         jPanel25.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel25.setOpaque(false);
         jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel26.setOpaque(false);
 
         fieldCorreo.setPreferredSize(new java.awt.Dimension(150, 20));
         jPanel26.add(fieldCorreo);
 
         jPanel25.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, -1, -1));
 
+        jPanel27.setOpaque(false);
+
+        textoCorreo.setForeground(new java.awt.Color(0, 0, 0));
         textoCorreo.setText("Correo");
         jPanel27.add(textoCorreo);
 
@@ -330,6 +385,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel28.setBackground(new java.awt.Color(241, 191, 152));
+
         botonRegistrarme.setText("Registrarme");
         botonRegistrarme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,6 +394,8 @@ public class PantallaRegistro extends javax.swing.JPanel {
             }
         });
         jPanel28.add(botonRegistrarme);
+
+        jPanel29.setOpaque(false);
 
         textoError.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel29.add(textoError);
@@ -376,41 +435,27 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
+        jPanel2.setLayout(new java.awt.BorderLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         textoPrincipal.setText("Registro");
-        jPanel2.add(textoPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 90, 40));
+        jPanel2.add(textoPrincipal, java.awt.BorderLayout.CENTER);
 
         jPanel30.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel30.setOpaque(false);
 
-        botonAtras.setText("...");
+        botonAtras.setText("<");
         botonAtras.setPreferredSize(new java.awt.Dimension(30, 30));
         botonAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonAtrasActionPerformed(evt);
             }
         });
+        jPanel30.add(botonAtras);
 
-        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
-        jPanel30.setLayout(jPanel30Layout);
-        jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel30Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(botonAtras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel2.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.add(jPanel30, java.awt.BorderLayout.LINE_START);
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
@@ -426,7 +471,7 @@ public class PantallaRegistro extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         add(panelPrincipal, java.awt.BorderLayout.CENTER);

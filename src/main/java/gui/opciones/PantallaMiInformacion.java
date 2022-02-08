@@ -63,100 +63,111 @@ public class PantallaMiInformacion extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(350, 519));
         setLayout(new java.awt.BorderLayout());
 
+        panelPrincipal.setBackground(new java.awt.Color(225, 244, 203));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 519));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
+        jPanel2.setLayout(new java.awt.BorderLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Mi Informacion");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 30));
+        jPanel2.add(jLabel1, java.awt.BorderLayout.CENTER);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setOpaque(false);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("<");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel2.add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel4.setBackground(new java.awt.Color(225, 244, 203));
 
-        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
-
-        jPanel3.setBackground(new java.awt.Color(255, 0, 204));
+        jPanel3.setBackground(new java.awt.Color(186, 203, 169));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel6.setOpaque(false);
+
         textoUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoUsuario.setForeground(new java.awt.Color(0, 0, 0));
         textoUsuario.setText("Usuario");
         jPanel6.add(textoUsuario);
 
         jPanel3.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
+        jPanel7.setOpaque(false);
+
         textoUsuarioLista.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoUsuarioLista.setForeground(new java.awt.Color(0, 0, 0));
         textoUsuarioLista.setText("jLabel2");
         jPanel7.add(textoUsuarioLista);
 
         jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
-        jPanel5.setBackground(new java.awt.Color(255, 0, 204));
+        jPanel5.setBackground(new java.awt.Color(186, 203, 169));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel8.setOpaque(false);
+
         textoNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoNombre.setForeground(new java.awt.Color(0, 0, 0));
         textoNombre.setText("Nombre");
         jPanel8.add(textoNombre);
 
         jPanel5.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
+        jPanel9.setOpaque(false);
+
         textoNombreLista.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoNombreLista.setForeground(new java.awt.Color(0, 0, 0));
         textoNombreLista.setText("jLabel2");
         jPanel9.add(textoNombreLista);
 
         jPanel5.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
-        jPanel10.setBackground(new java.awt.Color(255, 0, 204));
+        jPanel10.setBackground(new java.awt.Color(186, 203, 169));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel11.setOpaque(false);
+
         textoCelular.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoCelular.setForeground(new java.awt.Color(0, 0, 0));
         textoCelular.setText("Celular");
         jPanel11.add(textoCelular);
 
         jPanel10.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
+        jPanel12.setOpaque(false);
+
         textoCelularLista.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoCelularLista.setForeground(new java.awt.Color(0, 0, 0));
         textoCelularLista.setText("jLabel2");
         jPanel12.add(textoCelularLista);
 
         jPanel10.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, -1));
 
-        jPanel13.setBackground(new java.awt.Color(255, 0, 204));
+        jPanel13.setBackground(new java.awt.Color(186, 203, 169));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel14.setOpaque(false);
+
         textoCorreo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoCorreo.setForeground(new java.awt.Color(0, 0, 0));
         textoCorreo.setText("Correo");
         jPanel14.add(textoCorreo);
 
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
 
+        jPanel15.setOpaque(false);
+
         textoCorreoLista.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        textoCorreoLista.setForeground(new java.awt.Color(0, 0, 0));
         textoCorreoLista.setText("jLabel2");
         jPanel15.add(textoCorreoLista);
 
@@ -182,7 +193,7 @@ public class PantallaMiInformacion extends javax.swing.JPanel {
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(209, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);

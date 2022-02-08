@@ -122,16 +122,19 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(350, 519));
         setPreferredSize(new java.awt.Dimension(350, 519));
 
+        panelPrincipal.setBackground(new java.awt.Color(225, 244, 203));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(350, 519));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(241, 191, 152));
         jPanel2.setLayout(new java.awt.BorderLayout());
 
         textoPrincipal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        textoPrincipal.setForeground(new java.awt.Color(0, 0, 0));
         textoPrincipal.setText("Producto");
         jPanel2.add(textoPrincipal, java.awt.BorderLayout.CENTER);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 0));
+        jPanel1.setOpaque(false);
 
         botonVolverAtras.setText("<");
         botonVolverAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -143,7 +146,9 @@ public class PantallaVerProducto extends javax.swing.JPanel {
 
         jPanel2.add(jPanel1, java.awt.BorderLayout.LINE_START);
 
-        jPanel4.setBackground(new java.awt.Color(0, 255, 0));
+        jPanel4.setBackground(new java.awt.Color(225, 244, 203));
+
+        jPanel3.setBackground(new java.awt.Color(241, 191, 152));
 
         botonAgregarCarrito.setText("Agregar al Carrito");
         botonAgregarCarrito.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -154,20 +159,28 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         });
         jPanel3.add(botonAgregarCarrito);
 
+        jPanel5.setBackground(new java.awt.Color(186, 203, 169));
+
         jPanel9.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel9.setOpaque(false);
 
         jPanel6.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel6.setOpaque(false);
         jPanel6.setLayout(new javax.swing.BoxLayout(jPanel6, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel7.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel7.setOpaque(false);
 
+        textoItem.setForeground(new java.awt.Color(0, 0, 0));
         textoItem.setText("1");
         jPanel7.add(textoItem);
 
         jPanel6.add(jPanel7);
 
         jPanel8.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel8.setOpaque(false);
 
+        textoRespuesta1.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta1.setText("2");
         jPanel8.add(textoRespuesta1);
 
@@ -176,19 +189,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel9.add(jPanel6);
 
         jPanel10.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel10.setOpaque(false);
 
         jPanel11.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel11.setOpaque(false);
         jPanel11.setLayout(new javax.swing.BoxLayout(jPanel11, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel12.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel12.setOpaque(false);
 
+        textoItem1.setForeground(new java.awt.Color(0, 0, 0));
         textoItem1.setText("1");
         jPanel12.add(textoItem1);
 
         jPanel11.add(jPanel12);
 
         jPanel13.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel13.setOpaque(false);
 
+        textoRespuesta2.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta2.setText("2");
         jPanel13.add(textoRespuesta2);
 
@@ -197,19 +216,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel10.add(jPanel11);
 
         jPanel14.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel14.setOpaque(false);
 
         jPanel15.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel15.setOpaque(false);
         jPanel15.setLayout(new javax.swing.BoxLayout(jPanel15, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel16.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel16.setOpaque(false);
 
+        textoItem2.setForeground(new java.awt.Color(0, 0, 0));
         textoItem2.setText("1");
         jPanel16.add(textoItem2);
 
         jPanel15.add(jPanel16);
 
         jPanel17.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel17.setOpaque(false);
 
+        textoRespuesta3.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta3.setText("2");
         jPanel17.add(textoRespuesta3);
 
@@ -218,19 +243,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel14.add(jPanel15);
 
         jPanel18.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel18.setOpaque(false);
 
         jPanel19.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel19.setOpaque(false);
         jPanel19.setLayout(new javax.swing.BoxLayout(jPanel19, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel20.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel20.setOpaque(false);
 
+        textoItem3.setForeground(new java.awt.Color(0, 0, 0));
         textoItem3.setText("1");
         jPanel20.add(textoItem3);
 
         jPanel19.add(jPanel20);
 
         jPanel21.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel21.setOpaque(false);
 
+        textoRespuesta4.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta4.setText("2");
         jPanel21.add(textoRespuesta4);
 
@@ -239,19 +270,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel18.add(jPanel19);
 
         jPanel22.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel22.setOpaque(false);
 
         jPanel23.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel23.setOpaque(false);
         jPanel23.setLayout(new javax.swing.BoxLayout(jPanel23, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel24.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel24.setOpaque(false);
 
+        textoItem4.setForeground(new java.awt.Color(0, 0, 0));
         textoItem4.setText("1");
         jPanel24.add(textoItem4);
 
         jPanel23.add(jPanel24);
 
         jPanel25.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel25.setOpaque(false);
 
+        textoRespuesta5.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta5.setText("2");
         jPanel25.add(textoRespuesta5);
 
@@ -260,19 +297,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel22.add(jPanel23);
 
         jPanel26.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel26.setOpaque(false);
 
         jPanel27.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel27.setOpaque(false);
         jPanel27.setLayout(new javax.swing.BoxLayout(jPanel27, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel28.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel28.setOpaque(false);
 
+        textoItem5.setForeground(new java.awt.Color(0, 0, 0));
         textoItem5.setText("1");
         jPanel28.add(textoItem5);
 
         jPanel27.add(jPanel28);
 
         jPanel29.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel29.setOpaque(false);
 
+        textoRespuesta6.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta6.setText("2");
         jPanel29.add(textoRespuesta6);
 
@@ -281,19 +324,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel26.add(jPanel27);
 
         jPanel30.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel30.setOpaque(false);
 
         jPanel31.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel31.setOpaque(false);
         jPanel31.setLayout(new javax.swing.BoxLayout(jPanel31, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel32.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel32.setOpaque(false);
 
+        textoItem6.setForeground(new java.awt.Color(0, 0, 0));
         textoItem6.setText("1");
         jPanel32.add(textoItem6);
 
         jPanel31.add(jPanel32);
 
         jPanel33.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel33.setOpaque(false);
 
+        textoRespuesta7.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta7.setText("2");
         jPanel33.add(textoRespuesta7);
 
@@ -302,19 +351,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel30.add(jPanel31);
 
         jPanel34.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel34.setOpaque(false);
 
         jPanel35.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel35.setOpaque(false);
         jPanel35.setLayout(new javax.swing.BoxLayout(jPanel35, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel36.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel36.setOpaque(false);
 
+        textoItem7.setForeground(new java.awt.Color(0, 0, 0));
         textoItem7.setText("1");
         jPanel36.add(textoItem7);
 
         jPanel35.add(jPanel36);
 
         jPanel37.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel37.setOpaque(false);
 
+        textoRespuesta8.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta8.setText("2");
         jPanel37.add(textoRespuesta8);
 
@@ -323,19 +378,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel34.add(jPanel35);
 
         jPanel38.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel38.setOpaque(false);
 
         jPanel39.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel39.setOpaque(false);
         jPanel39.setLayout(new javax.swing.BoxLayout(jPanel39, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel40.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel40.setOpaque(false);
 
+        textoItem8.setForeground(new java.awt.Color(0, 0, 0));
         textoItem8.setText("1");
         jPanel40.add(textoItem8);
 
         jPanel39.add(jPanel40);
 
         jPanel41.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel41.setOpaque(false);
 
+        textoRespuesta9.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta9.setText("2");
         jPanel41.add(textoRespuesta9);
 
@@ -344,19 +405,25 @@ public class PantallaVerProducto extends javax.swing.JPanel {
         jPanel38.add(jPanel39);
 
         jPanel42.setBackground(new java.awt.Color(102, 255, 153));
+        jPanel42.setOpaque(false);
 
         jPanel43.setBackground(new java.awt.Color(204, 0, 153));
+        jPanel43.setOpaque(false);
         jPanel43.setLayout(new javax.swing.BoxLayout(jPanel43, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel44.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel44.setOpaque(false);
 
+        textoItem9.setForeground(new java.awt.Color(0, 0, 0));
         textoItem9.setText("1");
         jPanel44.add(textoItem9);
 
         jPanel43.add(jPanel44);
 
         jPanel45.setBackground(new java.awt.Color(204, 255, 255));
+        jPanel45.setOpaque(false);
 
+        textoRespuesta10.setForeground(new java.awt.Color(0, 0, 0));
         textoRespuesta10.setText("2");
         jPanel45.add(textoRespuesta10);
 
